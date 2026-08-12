@@ -31,6 +31,7 @@ export default function Home() {
 
   const heroBgRef = useRef<HTMLDivElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const foundationVideoRef = useRef<HTMLVideoElement>(null);
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
 
   useEffect(() => {
@@ -89,6 +90,32 @@ export default function Home() {
       window.removeEventListener('touchend', unlockPlay);
       window.removeEventListener('scroll', unlockPlay);
       window.removeEventListener('click', unlockPlay);
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = foundationVideoRef.current;
+    if (!video) return;
+
+    const attemptPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.play().catch(() => undefined);
+    };
+
+    const events = ['loadedmetadata', 'loadeddata', 'canplay', 'playing'];
+    events.forEach((event) => video.addEventListener(event, attemptPlay));
+    window.addEventListener('touchstart', attemptPlay, { passive: true });
+    window.addEventListener('click', attemptPlay, { passive: true });
+    window.addEventListener('scroll', attemptPlay, { passive: true });
+    attemptPlay();
+
+    return () => {
+      events.forEach((event) => video.removeEventListener(event, attemptPlay));
+      window.removeEventListener('touchstart', attemptPlay);
+      window.removeEventListener('click', attemptPlay);
+      window.removeEventListener('scroll', attemptPlay);
     };
   }, []);
 
@@ -342,10 +369,19 @@ export default function Home() {
                 height: '380px',
               }}>
                 <video
+                  ref={foundationVideoRef}
                   src="https://i.imgur.com/fTDcor7.mp4"
                   preload="metadata"
                   autoPlay
                   muted
+                  onError={(event) => {
+                    const video = event.currentTarget;
+                    if (video.dataset.fallbackApplied) return;
+                    video.dataset.fallbackApplied = 'true';
+                    video.src = '/mga-about-video.mp4';
+                    video.load();
+                    video.play().catch(() => undefined);
+                  }}
                   loop
                   playsInline
                   style={{
