@@ -4,7 +4,7 @@ import {
   Star,
   Phone,
   MapPin,
-  Wrench,
+  Hammer,
   CheckCircle2,
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
@@ -25,8 +25,8 @@ const container: React.CSSProperties = {
 
 export default function Home() {
   usePageTitle(
-    'P.N Byggentreprenad AB | Entreprenad & Markarbete – Skåne',
-    'Vi på P.N Byggentreprenad AB utför alla typer av entreprenad-, mark-, betong-, pool- och anläggningsarbeten i Skåne. Kontakta oss för en kostnadsfri offert!'
+    'MGA Markarbeten AB | Entreprenad & Markarbete – Habo',
+    'Vi på MGA Markarbeten AB utför alla typer av entreprenad-, mark-, betong-, pool- och anläggningsarbeten i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);
@@ -125,7 +125,7 @@ export default function Home() {
                 el.playsInline = true;
               }
             }}
-            src="/hero-video.mp4"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260810_094024_96fb5445-a779-46f4-8d2c-49541bf52de9.mp4"
             preload="auto"
             autoPlay
             loop
@@ -165,8 +165,8 @@ export default function Home() {
             {/* Top Location Line */}
             <ScrollReveal animation="fade-down" delay={0} duration={0.6}>
               <span style={{
-                fontFamily: "'Oswald', 'Outfit', sans-serif",
-                letterSpacing: '0.28em',
+                fontFamily: "'Outfit', 'Plus Jakarta Sans', sans-serif",
+                letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 fontSize: 'clamp(0.75rem, 1.4vw, 0.85rem)',
                 fontWeight: 600,
@@ -174,11 +174,11 @@ export default function Home() {
                 display: 'block',
                 marginBottom: '16px',
               }}>
-                SKÅNE • MALMÖ • HELSINGBORG • LUND
+                HABO • JÖNKÖPING • MULLSJÖ • BANKERYD
               </span>
             </ScrollReveal>
 
-            {/* Huge Condensed Headline (H1) matching reference screenshot */}
+            {/* Huge Condensed Headline (H1) matching reference logo screenshot */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 style={{
                 fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
@@ -187,11 +187,11 @@ export default function Home() {
                 fontWeight: 400,
                 lineHeight: 0.88,
                 textTransform: 'uppercase',
-                letterSpacing: '0.04em',
+                letterSpacing: '0.03em',
                 margin: '0 0 24px 0',
-                textShadow: '0 4px 30px rgba(0, 0, 0, 0.9)',
+                textShadow: '0 4px 20px rgba(0, 0, 0, 0.85)',
               }}>
-                P.N BYGG<br />ENTREPRENAD
+                MGA<br />MARKARBETEN<br />AB
               </h1>
             </ScrollReveal>
 
@@ -207,7 +207,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Din entreprenör i Skåne — markarbeten, betong, dränering och maskinuthyrning med hantverk som syns i varje detalj.
+                Din entreprenör i Habo — markarbeten, betong, dränering och maskinuthyrning med hantverk som syns i varje detalj.
               </p>
             </ScrollReveal>
 
@@ -226,7 +226,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  href="tel:0723868375"
+                  href="tel:0761778570"
                   onClick={(e) => {
                     if (window.innerWidth > 768) {
                       e.preventDefault();
@@ -236,7 +236,7 @@ export default function Home() {
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                     <Phone size={18} />
-                    Ring 072-386 83 75
+                    Ring 076-177 85 70
                   </span>
                 </Button>
               </div>
@@ -267,7 +267,7 @@ export default function Home() {
             {[
               { icon: Phone, title: 'Ring oss', desc: 'Berätta om ditt projekt, så hjälper vi dig avgöra vad som krävs och vad det kostar.' },
               { icon: MapPin, title: 'Kostnadsfritt platsbesök', desc: 'Vi besöker er tomt för att mäta höjdskillnader, bedöma marken och ta fram en offert.' },
-              { icon: Wrench, title: 'Vi utför', desc: 'Vi utför arbetet på ett tryggt och professionellt sätt med fokus på kvalitet.' },
+              { icon: Hammer, title: 'Vi utför', desc: 'Vi utför arbetet på ett tryggt och professionellt sätt med fokus på kvalitet.' },
             ].map(({ icon: Icon, title, desc }, i) => (
               <div key={i} style={{ display: 'contents' }}>
                 <ScrollReveal animation="blur-in" delay={i * 150} duration={0.8}>
@@ -327,68 +327,39 @@ export default function Home() {
             gap: '60px',
             alignItems: 'center',
           }}>
-            {/* Left: Premium Visual Collage (Logo + Work Showcase Photo) */}
+            {/* Left: Video Showcase (Replacing Logo) */}
             <ScrollReveal animation="fade-left" duration={0.8}>
               <div style={{
                 position: 'relative',
                 width: '100%',
                 maxWidth: '440px',
-                margin: '20px auto 0 auto',
+                margin: '0 auto',
+                borderRadius: '24px',
+                overflow: 'hidden',
+                boxShadow: '0 20px 40px rgba(15, 23, 42, 0.22)',
+                border: '3px solid rgba(234, 88, 12, 0.2)',
+                background: '#0f172a',
+                height: '380px',
               }}>
-                {/* Main Work Showcase Photo */}
-                <div style={{
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 20px 40px rgba(15, 23, 42, 0.22)',
-                  border: '4px solid #ffffff',
-                  position: 'relative',
-                  height: '380px',
-                  background: '#e2e8f0',
-                }}>
-                  <img
-                    src="/pn-work-showcase.jpg"
-                    alt="P.N Byggentreprenad AB utför markarbeten"
-                    loading="lazy"
-                    decoding="async"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                    }}
-                  />
-                  <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.35) 0%, transparent 60%)',
-                  }} />
-                </div>
-
-                {/* Floating Official Logo Badge (Top Left) */}
+                <video
+                  src="/mga-about-video.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
                 <div style={{
                   position: 'absolute',
-                  top: '-24px',
-                  left: '-16px',
-                  background: '#ffffff',
-                  padding: '12px 20px',
-                  borderRadius: '16px',
-                  boxShadow: '0 12px 30px rgba(0, 0, 0, 0.22)',
-                  border: '1px solid rgba(226, 232, 240, 0.9)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  zIndex: 3,
-                }}>
-                  <img
-                    src={images.logo.url}
-                    alt={images.logo.alt}
-                    style={{
-                      height: '46px',
-                      width: 'auto',
-                      objectFit: 'contain',
-                    }}
-                  />
-                </div>
+                  inset: 0,
+                  background: 'linear-gradient(to top, rgba(15, 23, 42, 0.25) 0%, transparent 60%)',
+                  pointerEvents: 'none',
+                }} />
               </div>
             </ScrollReveal>
 
@@ -415,7 +386,7 @@ export default function Home() {
                   lineHeight: 1.75,
                   margin: '0 0 32px 0',
                 }}>
-                  Föremålet för P.N Byggentreprenad AB:s verksamhet är bygg- och anläggningsverksamhet. Vi erbjuder engagemang, trygghet och kostnadseffektiva helhetslösningar till ert byggprojekt — inklusive mark- och grundarbeten, betong, dränering, takbyten samt uthyrning av anläggningsmaskiner med erfarna förare.
+                  Med rötter sedan 2011 erbjuder MGA Markarbeten AB engagemang, trygghet och helhetslösningar för din utemiljö. Vårt team på 6 anställda utför allt från stensättning, murar, dränering och tomtplanering till betong och grundläggning med Habo och Jönköping som utgångspunkt.
                 </p>
               </ScrollReveal>
               <ScrollReveal animation="fade-right" duration={0.8} delay={200}>
@@ -506,7 +477,8 @@ export default function Home() {
                         {svc.title}
                       </h3>
                     </div>
-                    <div className="spaced-tile-right">
+                    <div className="spaced-tile-right" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                      <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.6)', fontWeight: 500, letterSpacing: '0.02em' }}>Läs mer</span>
                       <span className="spaced-tile-action">Begär offert</span>
                     </div>
                   </div>
@@ -622,8 +594,8 @@ export default function Home() {
             {[
               {
                 name: 'Johan Kvist',
-                location: 'Malmö',
-                text: 'Anlitade P.N Byggentreprenad för mark- och grundarbetet inför vårt husbygge i Skåne. Maskinföraren var otroligt skicklig och noggrann, och allt blev klart snabbare än förväntat. Kan varmt rekommenderas!',
+                location: 'Habo',
+                text: 'Anlitade MGA Markarbeten för mark- och grundarbetet inför vårt husbygge i Habo. Maskinföraren var otroligt skicklig och noggrann, och allt blev klart snabbare än förväntat. Kan varmt rekommenderas!',
                 stars: 5,
                 date: 'för 2 veckor sedan',
                 authorSub: 'Lokal guide • 8 omdömen',
@@ -669,8 +641,8 @@ export default function Home() {
       <style>{`
         .spaced-screenshot-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: clamp(16px, 2.5vw, 24px);
+          grid-template-columns: repeat(2, 1fr);
+          gap: clamp(20px, 3vw, 32px);
         }
         .spaced-tile {
           position: relative;

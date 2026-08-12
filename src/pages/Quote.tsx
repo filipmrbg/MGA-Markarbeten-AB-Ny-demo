@@ -48,7 +48,7 @@ const inputStyle: React.CSSProperties = {
 
 function focusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
   e.currentTarget.style.borderColor = 'var(--color-primary)';
-  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.15)';
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(234, 88, 12, 0.15)';
 }
 function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
   e.currentTarget.style.borderColor = '#e5e7eb';
@@ -57,8 +57,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | 
 
 export default function Quote() {
   usePageTitle(
-    'Begär offert | P.N Byggentreprenad AB',
-    'Beskriv ditt projekt och begär en kostnadsfri offert för entreprenad- och markarbeten med Skåne som utgångspunkt.'
+    'Begär offert | MGA Markarbeten AB',
+    'Beskriv ditt projekt och begär en kostnadsfri offert för entreprenad- och markarbeten med Habo som utgångspunkt.'
   );
   const [name, setName]       = useState('');
   const [email, setEmail]     = useState('');
@@ -193,12 +193,10 @@ export default function Quote() {
                     onBlur={blurInput}
                   >
                     <option value="">Välj tjänst...</option>
-                    <option value="markarbete">Markarbete</option>
-                    <option value="grundlaggning">Grundläggning</option>
-                    <option value="dranering">Dränering</option>
-                    <option value="poolbygge">Poolbygge</option>
-                    <option value="stodmurar">Stödmurar</option>
-                    <option value="plattsattning">Plattsättning</option>
+                    <option value="anlaggning">Anläggning</option>
+                    <option value="bygg">Bygg</option>
+                    <option value="dranering-va">Dränering & V/A</option>
+                    <option value="skog">Skog & Trädfällning</option>
                     <option value="annat">Annat projekt</option>
                   </select>
 

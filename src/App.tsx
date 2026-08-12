@@ -55,7 +55,7 @@ export default function App() {
           <div style={{
             width: '36px',
             height: '36px',
-            border: '3px solid rgba(37, 99, 235, 0.2)',
+            border: '3px solid rgba(234, 88, 12, 0.2)',
             borderTopColor: 'var(--color-primary)',
             borderRadius: '50%',
             animation: 'spin 0.8s linear infinite',

@@ -53,9 +53,9 @@ function handleMouseEnter(e: React.MouseEvent<HTMLElement>, variant: Variant) {
   el.style.transform = 'translateY(-2px)';
   if (variant === 'primary') {
     el.style.background = 'var(--color-primary-hover)';
-    el.style.boxShadow = '0 8px 25px rgba(37, 99, 235, 0.45)';
+    el.style.boxShadow = '0 8px 25px rgba(234, 88, 12, 0.45)';
   } else {
-    el.style.boxShadow = '0 8px 25px rgba(37, 99, 235, 0.2)';
+    el.style.boxShadow = '0 8px 25px rgba(234, 88, 12, 0.2)';
   }
 }
 

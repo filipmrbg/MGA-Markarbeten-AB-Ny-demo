@@ -9,8 +9,7 @@ const serviceLinks = [
 ];
 
 const socialIcons = [
-  { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/p/PN-Byggentreprenad-AB-100090385661428/' },
-  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/p.n_byggentreprenad/' },
+  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/mgamarkarbeten/' },
 ];
 
 export default function Footer() {
@@ -59,7 +58,7 @@ export default function Footer() {
               </Link>
             </div>
             <p style={{ color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0 0 20px 0' }}>
-              Professionellt entreprenadföretag med Skåne som utgångspunkt. Vi utför alla typer av entreprenad- och markarbeten med stor precision.
+              Professionellt entreprenadföretag med Habo som utgångspunkt. Vi utför alla typer av entreprenad- och markarbeten med stor precision.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {socialIcons.map(({ Icon, label, href }) => (
@@ -132,23 +131,23 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
 
               <a
-                href="mailto:info@pnbyggentreprenad.se"
+                href="mailto:mattias@mgamark.se"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Mail size={16} strokeWidth={2} />
                 </div>
-                <span>info@pnbyggentreprenad.se</span>
+                <span>mattias@mgamark.se</span>
               </a>
 
               <a
-                href="tel:0723868375"
+                href="tel:0761778570"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Phone size={16} strokeWidth={2} />
                 </div>
-                <span>072-386 83 75</span>
+                <span>076-177 85 70</span>
               </a>
 
               <div
@@ -157,7 +156,7 @@ export default function Footer() {
                 <div className="footer-contact-icon">
                   <MapPin size={16} strokeWidth={2} />
                 </div>
-                <span>Skåne som utgångspunkt</span>
+                <span>Habo som utgångspunkt</span>
               </div>
             </div>
           </div>
@@ -179,7 +178,7 @@ export default function Footer() {
           }}
         >
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', color: 'var(--color-gray-600)', fontSize: '0.875rem', flexWrap: 'wrap' }}>
-            <span>© 2026 - P.N Byggentreprenad AB</span>
+            <span>© 2026 - MGA Markarbeten AB</span>
           </div>
         </div>
       </div>

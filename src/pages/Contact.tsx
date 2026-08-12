@@ -21,8 +21,8 @@ const faqItems = [
     answer: 'Vi brukar återkomma med en offert inom 1–3 arbetsdagar efter platsbesöket, beroende på projektets omfattning.',
   },
   {
-    question: 'Tar ni på er jobb utanför Skåne?',
-    answer: 'Skåne är vår utgångspunkt, men vi kan ta uppdrag i närliggande områden vid större projekt. Hör av dig så berättar vi mer.',
+    question: 'Tar ni på er jobb utanför Habo?',
+    answer: 'Habo är vår utgångspunkt, men vi kan ta uppdrag i närliggande områden vid större projekt. Hör av dig så berättar vi mer.',
   },
   {
     question: 'Kan jag boka ett platsbesök direkt?',
@@ -48,7 +48,7 @@ const inputStyle: React.CSSProperties = {
 
 function focusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
   e.currentTarget.style.borderColor = 'var(--color-primary)';
-  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.15)';
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(234, 88, 12, 0.15)';
 }
 function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
   e.currentTarget.style.borderColor = '#e5e7eb';
@@ -57,8 +57,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) 
 
 export default function Contact() {
   usePageTitle(
-    'Kontakta P.N Byggentreprenad AB | Offert & Rådgivning',
-    'Hör av dig till P.N Byggentreprenad AB för frågor, kostnadsfria platsbesök eller offert gällande ditt nästa entreprenad- och markprojekt med Skåne som utgångspunkt.'
+    'Kontakta MGA Markarbeten AB | Offert & Rådgivning',
+    'Hör av dig till MGA Markarbeten AB för frågor, kostnadsfria platsbesök eller offert gällande ditt nästa entreprenad- och markprojekt med Habo som utgångspunkt.'
   );
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -132,7 +132,7 @@ export default function Contact() {
                     width: '48px',
                     height: '48px',
                     minWidth: '48px',
-                    background: 'rgba(37, 99, 235, 0.1)',
+                    background: 'rgba(234, 88, 12, 0.1)',
                     borderRadius: '12px',
                     display: 'flex',
                     alignItems: 'center',
@@ -146,12 +146,12 @@ export default function Contact() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <a
-                        href="tel:0723868375"
+                        href="tel:0761778570"
                         style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                       >
-                        072-386 83 75
+                        076-177 85 70
                       </a>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                     width: '48px',
                     height: '48px',
                     minWidth: '48px',
-                    background: 'rgba(37, 99, 235, 0.1)',
+                    background: 'rgba(234, 88, 12, 0.1)',
                     borderRadius: '12px',
                     display: 'flex',
                     alignItems: 'center',
@@ -175,7 +175,7 @@ export default function Contact() {
                       Plats / Utgångspunkt
                     </p>
                     <p style={{ margin: 0, color: 'var(--color-gray-600)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                      Skåne som utgångspunkt
+                      Habo som utgångspunkt
                     </p>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                     width: '48px',
                     height: '48px',
                     minWidth: '48px',
-                    background: 'rgba(37, 99, 235, 0.1)',
+                    background: 'rgba(234, 88, 12, 0.1)',
                     borderRadius: '12px',
                     display: 'flex',
                     alignItems: 'center',
@@ -198,12 +198,12 @@ export default function Contact() {
                       E-post
                     </p>
                     <a
-                      href="mailto:info@pnbyggentreprenad.se"
+                      href="mailto:mattias@mgamark.se"
                       style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                     >
-                      info@pnbyggentreprenad.se
+                      mattias@mgamark.se
                     </a>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function Contact() {
                       const el = e.currentTarget as HTMLElement;
                       el.style.background = 'var(--color-primary-hover)';
                       el.style.transform = 'translateY(-2px)';
-                      el.style.boxShadow = '0 8px 24px rgba(37, 99, 235, 0.45)';
+                      el.style.boxShadow = '0 8px 24px rgba(234, 88, 12, 0.45)';
                     }}
                     onMouseLeave={e => {
                       const el = e.currentTarget as HTMLElement;

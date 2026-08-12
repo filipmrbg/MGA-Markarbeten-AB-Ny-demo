@@ -36,7 +36,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
 
   function focusInput(e: React.FocusEvent<HTMLInputElement>) {
     e.currentTarget.style.borderColor = 'var(--color-primary)';
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.15)';
+    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(234, 88, 12, 0.15)';
   }
   function blurInput(e: React.FocusEvent<HTMLInputElement>) {
     e.currentTarget.style.borderColor = '#e5e7eb';
@@ -63,7 +63,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
           letterSpacing: '0.05em',
           textTransform: 'uppercase',
           color: 'var(--color-primary)',
-          background: 'rgba(37, 99, 235, 0.08)',
+          background: 'rgba(234, 88, 12, 0.08)',
           padding: '4px 12px',
           borderRadius: '20px',
           display: 'inline-block',
@@ -145,17 +145,17 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
               border: 'none',
               borderRadius: 'var(--border-radius-pill)',
               cursor: 'pointer',
-              boxShadow: '0 4px 14px rgba(37, 99, 235, 0.3)',
+              boxShadow: '0 4px 14px rgba(234, 88, 12, 0.3)',
               transition: 'transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease',
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-              (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(37, 99, 235, 0.4)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(234, 88, 12, 0.4)';
               (e.currentTarget as HTMLElement).style.background = 'var(--color-primary-hover)';
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-              (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 14px rgba(37, 99, 235, 0.3)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 14px rgba(234, 88, 12, 0.3)';
               (e.currentTarget as HTMLElement).style.background = 'var(--color-primary)';
             }}
           >
@@ -207,7 +207,7 @@ export default function ServicePage() {
   }, [slug, normalizedSlug]);
 
   usePageTitle(
-    `${service.title} | P.N Byggentreprenad AB`,
+    `${service.title} | MGA Markarbeten AB`,
     service.heroText
   );
 
@@ -286,7 +286,7 @@ export default function ServicePage() {
                     background: 'var(--color-primary)',
                     padding: '5px 14px',
                     borderRadius: '20px',
-                    boxShadow: '0 2px 10px rgba(37, 99, 235, 0.4)',
+                    boxShadow: '0 2px 10px rgba(234, 88, 12, 0.4)',
                   }}>
                     {service.badge}
                   </span>
@@ -450,7 +450,7 @@ export default function ServicePage() {
                                 width: '22px',
                                 height: '22px',
                                 borderRadius: '50%',
-                                background: 'rgba(37, 99, 235, 0.12)',
+                                background: 'rgba(234, 88, 12, 0.12)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',

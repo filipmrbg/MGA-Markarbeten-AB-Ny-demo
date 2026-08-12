@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
@@ -12,176 +14,256 @@ const container: React.CSSProperties = {
 
 export default function ServicesOverview() {
   usePageTitle(
-    'Våra Tjänster | P.N Byggentreprenad AB – Skåne',
-    'Utforska våra kärntjänster inom entreprenad och mark i Skåne. Markarbete, betong, dränering, poolbygge, murararbete och plattsättning.'
+    'Våra Tjänster | MGA Markarbeten AB – Habo & Jönköping',
+    'Utforska våra 4 kärntjänster: Anläggning, Bygg, Dränering & V/A samt Skog & Trädfällning i Habo och Jönköping.'
   );
 
-  return (
-    <main style={{ fontFamily: 'var(--font-family)', background: '#f4f3ef' }}>
+  const { hash } = useLocation();
 
-      {/* ── HERO HEADER (DEDICATED SERVICES HERO IMAGE) ──────────── */}
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          const yOffset = -100;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [hash]);
+
+  const scrollToSection = (slug: string) => {
+    const element = document.getElementById(slug);
+    if (element) {
+      const yOffset = -100;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.history.pushState(null, '', `#${slug}`);
+    }
+  };
+
+  return (
+    <main style={{ fontFamily: 'var(--font-family)', background: '#ffffff' }}>
+
+      {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
         backgroundImage: 'url(/hero-services.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        paddingTop: '140px',
-        paddingBottom: '60px',
+        paddingTop: '150px',
+        paddingBottom: '70px',
         textAlign: 'center',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.78)' }} />
 
         <div style={{ ...container, position: 'relative', zIndex: 1 }}>
-          <div>
-            <ScrollReveal animation="blur-in">
-              <h1 style={{
-                color: 'var(--color-white)',
-                fontWeight: 800,
-                fontSize: 'clamp(2rem, 4vw, 3rem)',
-                margin: '0 0 16px 0',
-                lineHeight: 1.15,
-              }}>
-                Vad vi kan hjälpa dig med
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal animation="scale-x-center" delay={150} duration={0.6}>
-              <span style={{ display: 'block', width: '60px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '14px auto 0' }} />
-            </ScrollReveal>
-            <ScrollReveal animation="fade-up" delay={200}>
-              <p style={{
-                color: 'rgba(255,255,255,0.85)',
-                fontSize: '1.05rem',
-                maxWidth: '640px',
-                margin: '20px auto 0',
-                lineHeight: 1.65,
-              }}>
-                Helhetslösningar inom entreprenad, grundläggning och markarbeten för villor och fastigheter med Skåne som utgångspunkt.
-              </p>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal animation="blur-in">
+            <h1 style={{
+              color: 'var(--color-white)',
+              fontWeight: 800,
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)',
+              margin: '0 0 16px 0',
+              lineHeight: 1.15,
+            }}>
+              Våra Tjänster
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal animation="scale-x-center" delay={150} duration={0.6}>
+            <span style={{ display: 'block', width: '60px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '14px auto 0' }} />
+          </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={200}>
+            <p style={{
+              color: 'rgba(255,255,255,0.85)',
+              fontSize: '1.08rem',
+              maxWidth: '640px',
+              margin: '20px auto 0',
+              lineHeight: 1.65,
+            }}>
+              Vi på MGA Markarbeten AB erbjuder kompletta lösningar för din fastighet i Habo och Jönköping.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* ── SPACED TILE GRID SECTION ────────────────────────────── */}
-      <section style={{ padding: '60px 0 110px 0', background: '#f4f3ef', position: 'relative' }}>
-        <div style={{ ...container, position: 'relative', zIndex: 1 }}>
-          <div className="spaced-screenshot-grid">
-            {services.map((svc: ServiceItem, index: number) => (
-              <ScrollReveal key={svc.slug} animation="fade-up" delay={(index % 3) * 80}>
-                <Link to={svc.href} className="spaced-tile">
-                  <img
-                    src={svc.image}
-                    alt={svc.title}
-                    loading="lazy"
-                    className="spaced-tile-img"
-                  />
-                  <div className="spaced-tile-overlay" />
-
-                  <div className="spaced-tile-content">
-                    <div className="spaced-tile-left">
-                      <h3 className="spaced-tile-title">
-                        {svc.title}
-                      </h3>
-                    </div>
-                    <div className="spaced-tile-right">
-                      <span className="spaced-tile-action">Begär offert</span>
-                    </div>
-                  </div>
-                </Link>
-              </ScrollReveal>
+      {/* ── STICKY ANCHOR TAB BAR ──────────────────────────── */}
+      <div style={{
+        position: 'sticky',
+        top: '72px',
+        zIndex: 40,
+        background: 'rgba(255, 255, 255, 0.95)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid #e2e8f0',
+        padding: '12px 0',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+      }}>
+        <div style={container}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
+            flexWrap: 'wrap',
+          }}>
+            {services.map((svc) => (
+              <button
+                key={svc.slug}
+                onClick={() => scrollToSection(svc.slug)}
+                style={{
+                  background: '#f1f5f9',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '20px',
+                  padding: '8px 20px',
+                  fontSize: '0.92rem',
+                  fontWeight: 600,
+                  color: '#334155',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  fontFamily: 'var(--font-family)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'var(--color-primary)';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.borderColor = 'var(--color-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#f1f5f9';
+                  e.currentTarget.style.color = '#334155';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                }}
+              >
+                {svc.title}
+              </button>
             ))}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* ── DETAILED SERVICE SECTIONS (ALTERNATING LAYOUT) ──────────── */}
+      <div style={{ padding: '60px 0 100px 0' }}>
+        {services.map((svc: ServiceItem, index: number) => {
+          const isEven = index % 2 === 0;
+
+          return (
+            <section
+              key={svc.slug}
+              id={svc.slug}
+              style={{
+                padding: '80px 0',
+                background: isEven ? '#ffffff' : '#f8fafc',
+                borderBottom: '1px solid #e2e8f0',
+              }}
+            >
+              <div style={container}>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                  gap: '50px',
+                  alignItems: 'center',
+                }}>
+
+                  {/* Image Column */}
+                  <div style={{ order: isEven ? 1 : 2 }}>
+                    <ScrollReveal animation={isEven ? 'fade-right' : 'fade-left'}>
+                      <div style={{
+                        position: 'relative',
+                        borderRadius: '24px',
+                        overflow: 'hidden',
+                        boxShadow: '0 20px 40px rgba(15, 23, 42, 0.12)',
+                        border: '3px solid #ffffff',
+                        aspectRatio: '4/3',
+                        background: '#0f172a',
+                      }}>
+                        <img
+                          src={svc.image}
+                          alt={svc.title}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            display: 'block',
+                          }}
+                        />
+                      </div>
+                    </ScrollReveal>
+                  </div>
+
+                  {/* Content Column */}
+                  <div style={{ order: isEven ? 2 : 1 }}>
+                    <ScrollReveal animation={isEven ? 'fade-left' : 'fade-right'}>
+                      <h2 style={{
+                        color: 'var(--color-text-dark)',
+                        fontWeight: 800,
+                        fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+                        margin: '0 0 16px 0',
+                        lineHeight: 1.2,
+                      }}>
+                        {svc.title}
+                      </h2>
+                      <span style={{
+                        display: 'block',
+                        width: '50px',
+                        height: '3px',
+                        background: 'var(--color-primary)',
+                        borderRadius: '2px',
+                        marginBottom: '20px',
+                      }} />
+                      <p style={{
+                        color: 'var(--color-gray-600)',
+                        fontSize: '1.02rem',
+                        lineHeight: 1.75,
+                        margin: '0 0 32px 0',
+                        whiteSpace: 'pre-line',
+                      }}>
+                        {svc.detailedDescription}
+                      </p>
+
+                      {/* Action Button */}
+                      <Link
+                        to="/offert"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '10px',
+                          background: 'var(--color-primary)',
+                          color: '#ffffff',
+                          fontWeight: 700,
+                          fontSize: '0.95rem',
+                          padding: '14px 28px',
+                          borderRadius: 'var(--border-radius-pill)',
+                          textDecoration: 'none',
+                          boxShadow: '0 4px 14px rgba(234, 88, 12, 0.35)',
+                          transition: 'all 0.25s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'var(--color-primary-hover)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'var(--color-primary)';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
+                      >
+                        Begär offert för {svc.title} <ArrowRight size={16} />
+                      </Link>
+                    </ScrollReveal>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
 
       {/* ── CTA BANNER ────────────────────────────────────────── */}
       <CTABanner />
 
-      <style>{`
-        .spaced-screenshot-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: clamp(16px, 2.5vw, 24px);
-        }
-        .spaced-tile {
-          position: relative;
-          display: block;
-          text-decoration: none;
-          aspect-ratio: 16/10;
-          border-radius: 16px;
-          overflow: hidden;
-          background: #000;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-          border: 1px solid rgba(0, 0, 0, 0.06);
-          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-        }
-        .spaced-tile-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .spaced-tile-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 30%, rgba(0, 0, 0, 0.88) 100%);
-          transition: background 0.4s ease;
-        }
-        .spaced-tile:hover {
-          transform: translateY(-6px);
-          border-color: rgba(217, 119, 6, 0.45);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
-        }
-        .spaced-tile:hover .spaced-tile-img {
-          transform: scale(1.06);
-        }
-        .spaced-tile:hover .spaced-tile-overlay {
-          background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.92) 100%);
-        }
-        .spaced-tile-content {
-          position: absolute;
-          inset: auto 0 0 0;
-          padding: 24px 24px 22px 24px;
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          z-index: 2;
-        }
-        .spaced-tile-left {
-          display: flex;
-          flex-direction: column;
-        }
-        .spaced-tile-title {
-          color: #ffffff;
-          font-weight: 700;
-          font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-          margin: 0;
-          line-height: 1.2;
-          letter-spacing: -0.01em;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-        }
-        .spaced-tile-right {
-          flex-shrink: 0;
-          margin-left: 12px;
-        }
-        .spaced-tile-action {
-          color: rgba(255, 255, 255, 0.85);
-          font-size: 0.82rem;
-          font-weight: 600;
-          transition: color 0.3s ease;
-        }
-        .spaced-tile:hover .spaced-tile-action {
-          color: var(--color-primary);
-        }
-
-        @media (max-width: 1024px) {
-          .spaced-screenshot-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 768px) {
-          .spaced-screenshot-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </main>
   );
 }

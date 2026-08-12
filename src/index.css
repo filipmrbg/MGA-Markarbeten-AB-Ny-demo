@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  /* Vibrant Electric Steel Blue – high-contrast brand primary colour */
-  --color-primary: #2563EB;
-  --color-primary-hover: #1D4ED8;
+  /* Vibrant MGA Orange – brand primary colour */
+  --color-primary: #ea580c;
+  --color-primary-hover: #c2410c;
 
   /* Dark backgrounds – slate/concrete tones */
   --color-dark: #0F172A;
@@ -213,7 +213,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), #60A5FA);
+  background: linear-gradient(90deg, var(--color-primary), #fb923c);
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 5;
@@ -221,8 +221,8 @@ body {
 
 .service-card-el:hover {
   transform: translateY(-8px);
-  border-color: rgba(37, 99, 235, 0.45);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(37, 99, 235, 0.25);
+  border-color: rgba(234, 88, 12, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(234, 88, 12, 0.25);
 }
 
 .service-card-el:hover::before {

@@ -10,10 +10,10 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
 
   const contacts = [
     {
-      name: 'P.N Byggentreprenad AB',
+      name: 'MGA Markarbeten AB',
       role: 'Kundtjänst & Offert',
-      phone: '072-386 83 75',
-      tel: 'tel:0723868375',
+      phone: '076-177 85 70',
+      tel: 'tel:0761778570',
     },
   ];
 
@@ -84,7 +84,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
             style={{
               width: '56px',
               height: '56px',
-              background: 'rgba(37, 99, 235, 0.12)',
+              background: 'rgba(234, 88, 12, 0.12)',
               borderRadius: '16px',
               display: 'flex',
               alignItems: 'center',
@@ -103,7 +103,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
               fontFamily: 'var(--font-family)',
             }}
           >
-            Ring P.N Byggentreprenad AB
+            Ring MGA Markarbeten AB
           </h2>
           <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
             Kontakta oss direkt för rådgivning, frågor och kostnadsfri kalkyl.
@@ -131,7 +131,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
                 e.currentTarget.style.background = '#ffffff';
                 e.currentTarget.style.borderColor = 'var(--color-primary)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 99, 235, 0.18)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(234, 88, 12, 0.18)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = '#f8fafc';

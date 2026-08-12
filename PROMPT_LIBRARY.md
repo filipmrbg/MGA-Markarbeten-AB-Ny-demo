@@ -23,16 +23,16 @@ Scan the entire project and ensure that the correct company information is used 
 Remove any outdated or placeholder company details that may still exist in the template.
 
 Company Name:
-P.N Byggentreprenad AB
+MGA Markarbeten AB
 
 
 Location / City:
-Skåne                       
+Habo                    
 Phone Number:
-072-386 83 75
+076-177 85 70
 
 Email:
-info@pnbyggentreprenad.se
+mattias@mgamark.se
 
 ```
 
@@ -57,7 +57,7 @@ Important rules:
 4. The logo must also be used as the default preview image when the website is shared on social media platforms (OG image).
 
 Logo Image URL:
-[ENTER LOGO URL HERE]
+https://i.imgur.com/X4qER1V.png
 ```
 
 ---
@@ -70,14 +70,9 @@ Copy and paste the following into the AI chat:
 Use this brick to update the company’s social media links.
 Each link provided here must replace the existing social media links wherever they appear on the website (e.g., Header, Footer, Contact section).
 
-Facebook:
-[ENTER FACEBOOK URL HERE]
-
 Instagram:
-[ENTER INSTAGRAM URL HERE]
-
-LinkedIn / Other (optional):
-[ENTER OTHER SOCIAL URL HERE]
+https://www.instagram.com/mgamarkarbeten/
+```
 ```
 
 ---

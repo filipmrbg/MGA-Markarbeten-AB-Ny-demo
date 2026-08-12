@@ -205,7 +205,7 @@ function PreviewCard({ def, globalTick }: CardProps) {
           }}
           className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl shadow-xl px-8 py-6 text-center"
         >
-          <div className="text-2xl font-bold tracking-tight">P.N Byggentreprenad AB</div>
+          <div className="text-2xl font-bold tracking-tight">MGA Markarbeten AB</div>
           <div className="text-sm opacity-90 mt-1">Animation preview</div>
         </div>
       </div>
