@@ -32,7 +32,6 @@ export default function Home() {
   const heroBgRef = useRef<HTMLDivElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
 
   useEffect(() => {
     let ticking = false;
@@ -53,7 +52,7 @@ export default function Home() {
 
   useEffect(() => {
     const video = heroVideoRef.current;
-    if (!video || isMobile) return;
+    if (!video) return;
 
     const attemptPlay = () => {
       if (!video) return;
@@ -91,7 +90,7 @@ export default function Home() {
       window.removeEventListener('scroll', unlockPlay);
       window.removeEventListener('click', unlockPlay);
     };
-  }, [isMobile]);
+  }, []);
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -126,10 +125,9 @@ export default function Home() {
                 el.playsInline = true;
               }
             }}
-            src={isMobile ? undefined : "https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260810_094024_96fb5445-a779-46f4-8d2c-49541bf52de9.mp4"}
-            poster="/hero-main.webp"
-            preload={isMobile ? 'none' : 'metadata'}
-            autoPlay={!isMobile}
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260810_094024_96fb5445-a779-46f4-8d2c-49541bf52de9.mp4"
+            preload="auto"
+            autoPlay
             loop
             muted
             playsInline
@@ -142,7 +140,7 @@ export default function Home() {
               objectPosition: 'center',
             }}
           >
-            {!isMobile && <source src="/hero-video.mp4" type="video/mp4" />}
+            <source src="/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Dark overlay */}
