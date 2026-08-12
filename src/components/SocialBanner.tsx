@@ -127,6 +127,7 @@ export default function SocialBanner() {
         .instagram-spacious-card {
           width: 100%;
           max-width: 350px;
+          min-width: 0;
           margin: 0 auto;
           display: flex;
           justify-content: center;
@@ -145,13 +146,19 @@ export default function SocialBanner() {
 
         .instagram-spacious-card iframe,
         .instagram-spacious-card blockquote {
+          display: block !important;
           width: 100% !important;
-          min-width: 100% !important;
+          min-width: 0 !important;
           max-width: 100% !important;
           border-radius: 0 !important;
           box-shadow: none !important;
           border: none !important;
           margin: 0 !important;
+        }
+
+        .instagram-spacious-card > div {
+          width: 100%;
+          min-width: 0;
         }
 
         .social-banner-btn {
@@ -194,8 +201,26 @@ export default function SocialBanner() {
 
         @media (max-width: 992px) {
           .instagram-spacious-grid {
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
+          }
+        }
+
+        @media (max-width: 680px) {
+          .instagram-spacious-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+            width: 100%;
+            padding: 0;
+          }
+
+          .instagram-spacious-card {
+            max-width: 540px;
+            border-radius: 12px;
+          }
+
+          .instagram-spacious-card:hover {
+            transform: none;
           }
         }
 
