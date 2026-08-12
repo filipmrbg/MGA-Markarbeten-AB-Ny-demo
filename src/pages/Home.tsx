@@ -342,7 +342,8 @@ export default function Home() {
                 height: '380px',
               }}>
                 <video
-                  src="/mga-about-video.mp4"
+                  src="https://i.imgur.com/fTDcor7.mp4"
+                  preload="metadata"
                   autoPlay
                   muted
                   loop
