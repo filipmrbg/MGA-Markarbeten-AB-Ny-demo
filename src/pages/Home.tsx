@@ -219,12 +219,12 @@ export default function Home() {
                 color: 'rgba(255, 255, 255, 0.88)',
                 fontSize: 'clamp(1rem, 1.8vw, 1.18rem)',
                 lineHeight: 1.65,
-                maxWidth: '560px',
+                maxWidth: '620px',
                 margin: '0 0 36px 0',
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Din kompletta entreprenör i Habo och Jönköping för anläggning, bygg, dränering och trädfällning med gediget hantverk i varje detalj.
+                Vi hjälper dig med markarbete, stenläggning, bygg och trädfällning i Habo och Jönköping med omnejd. Från första spadtaget till färdig tomt.
               </p>
             </ScrollReveal>
 
