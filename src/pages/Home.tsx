@@ -205,20 +205,9 @@ export default function Home() {
               </span>
             </ScrollReveal>
 
-            {/* Huge Condensed Headline (H1) - 1 Line */}
+            {/* Huge Responsive Condensed Headline (H1) */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
-              <h1 style={{
-                fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
-                color: '#ffffff',
-                fontSize: 'clamp(2.8rem, 7.8vw, 6.6rem)',
-                fontWeight: 400,
-                lineHeight: 1.0,
-                textTransform: 'uppercase',
-                letterSpacing: '0.03em',
-                margin: '0 0 24px 0',
-                textShadow: '0 4px 20px rgba(0, 0, 0, 0.85)',
-                whiteSpace: 'nowrap',
-              }}>
+              <h1 className="hero-main-title">
                 MGA MARKARBETEN AB
               </h1>
             </ScrollReveal>
@@ -783,6 +772,25 @@ export default function Home() {
         @media (max-width: 1024px) {
           .spaced-screenshot-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .reviews-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+                .hero-main-title {
+          font-family: 'Bebas Neue', 'Oswald', sans-serif;
+          color: #ffffff;
+          font-size: clamp(2.8rem, 7.8vw, 6.6rem);
+          font-weight: 400;
+          line-height: 1.0;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+          margin: 0 0 24px 0;
+          text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+          white-space: nowrap;
+        }
+        @media (max-width: 640px) {
+          .hero-main-title {
+            white-space: normal !important;
+            font-size: clamp(2.5rem, 11vw, 3.6rem) !important;
+            line-height: 0.94 !important;
+          }
         }
         @media (max-width: 768px) {
           .spaced-screenshot-grid { grid-template-columns: 1fr !important; }
