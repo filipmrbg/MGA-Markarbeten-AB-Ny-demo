@@ -184,7 +184,7 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'flex-start',
             textAlign: 'left',
-            maxWidth: '680px',
+            maxWidth: '880px',
             margin: '0',
             paddingTop: '60px',
             paddingBottom: '40px',
@@ -205,20 +205,21 @@ export default function Home() {
               </span>
             </ScrollReveal>
 
-            {/* Huge Condensed Headline (H1) - 2 Lines */}
+            {/* Huge Condensed Headline (H1) - 1 Line */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 style={{
                 fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
                 color: '#ffffff',
-                fontSize: 'clamp(3.2rem, 7.5vw, 6.4rem)',
+                fontSize: 'clamp(2.4rem, 6vw, 5.2rem)',
                 fontWeight: 400,
-                lineHeight: 0.92,
+                lineHeight: 1.0,
                 textTransform: 'uppercase',
                 letterSpacing: '0.03em',
                 margin: '0 0 24px 0',
                 textShadow: '0 4px 20px rgba(0, 0, 0, 0.85)',
+                whiteSpace: 'nowrap',
               }}>
-                MGA<br />MARKARBETEN AB
+                MGA MARKARBETEN AB
               </h1>
             </ScrollReveal>
 
