@@ -224,7 +224,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Professionella entreprenadtjänster inom markarbete, anläggning, dränering, bygg och trädfällning i Habo och Jönköping med omnejd. Vi hjälper både privatpersoner och företag med allt från tomtplanering och schaktning till stensättning, altanbygge och skogsvård. Med modern maskinpark tar vi ett samlat helhetsansvar fram till färdigt resultat.
+                Utför grundarbeten, trädgårdsanläggning, byggtjänster och trädfällning i Habo och Jönköping med omnejd.
               </p>
             </ScrollReveal>
 
