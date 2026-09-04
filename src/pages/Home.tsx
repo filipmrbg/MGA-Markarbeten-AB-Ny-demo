@@ -224,7 +224,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Utför grundarbeten, trädgårdsanläggning, byggtjänster och trädfällning i Habo och Jönköping med omnejd.
+                Utför grundarbeten, trädgårdsanläggning och byggtjänster.
               </p>
             </ScrollReveal>
 
@@ -413,7 +413,7 @@ export default function Home() {
                   lineHeight: 1.75,
                   margin: '0 0 32px 0',
                 }}>
-                  Med rötter sedan 2011 erbjuder MGA Markarbeten AB engagemang, trygghet och helhetslösningar för din utemiljö. Vårt team på 6 anställda utför allt från stensättning, murar, dränering och tomtplanering till betong och grundläggning med Habo och Jönköping som utgångspunkt.
+                  Med rötter sedan 2011 erbjuder MGA Markarbeten AB engagemang, trygghet och helhetslösningar för din utemiljö. Vårt team på 6 anställda utför allt från stensättning, murar, dränering och tomtplanering till betong och grundläggning med Habo som utgångspunkt.
                 </p>
               </ScrollReveal>
               <ScrollReveal animation="fade-right" duration={0.8} delay={200}>
