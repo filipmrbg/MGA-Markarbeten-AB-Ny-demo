@@ -560,16 +560,21 @@ export default function Navbar() {
           height: 84px;
           max-height: 14vh;
           width: auto;
-          border-radius: 10px;
           display: block;
           object-fit: contain;
-          background-color: #ffffff;
-          padding: 6px 14px;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
+          filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-logo.scrolled {
           height: 62px;
+          background-color: transparent;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
         }
         @media (max-width: 1024px) {
           .phone-link { display: none !important; }
