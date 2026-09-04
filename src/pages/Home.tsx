@@ -205,20 +205,20 @@ export default function Home() {
               </span>
             </ScrollReveal>
 
-            {/* Huge Condensed Headline (H1) matching reference logo screenshot */}
+            {/* Huge Condensed Headline (H1) - 2 Lines */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 style={{
                 fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
                 color: '#ffffff',
-                fontSize: 'clamp(4.2rem, 10vw, 7.8rem)',
+                fontSize: 'clamp(3.2rem, 7.5vw, 6.4rem)',
                 fontWeight: 400,
-                lineHeight: 0.88,
+                lineHeight: 0.92,
                 textTransform: 'uppercase',
                 letterSpacing: '0.03em',
                 margin: '0 0 24px 0',
                 textShadow: '0 4px 20px rgba(0, 0, 0, 0.85)',
               }}>
-                MGA<br />MARKARBETEN<br />AB
+                MGA<br />MARKARBETEN AB
               </h1>
             </ScrollReveal>
 
