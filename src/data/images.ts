@@ -70,7 +70,7 @@ export interface SiteImages {
 
 const images: SiteImages = {
   logo: {
-    url: '/logo.png',
+    url: 'https://i.imgur.com/X4qER1V.png',
     alt: 'MGA Markarbeten AB',
   },
 
@@ -116,11 +116,11 @@ const images: SiteImages = {
 
   about: {
     hero: {
-      url: '/logo.png',
+      url: 'https://i.imgur.com/X4qER1V.png',
       alt: 'MGA Markarbeten AB logotyp',
     },
     teamMember: {
-      url: '/logo.png',
+      url: 'https://i.imgur.com/X4qER1V.png',
       alt: 'Teammedlem',
     },
   },

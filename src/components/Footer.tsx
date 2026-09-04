@@ -39,8 +39,10 @@ export default function Footer() {
               <Link to="/" onClick={handleLogoClick} style={{ textDecoration: 'none', display: 'inline-block', cursor: 'pointer' }}>
                 <div style={{
                   display: 'inline-block',
-                  background: 'transparent',
-                  padding: '0',
+                  background: '#ffffff',
+                  padding: '8px 16px',
+                  borderRadius: '10px',
+                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
                 }}>
                   <img
                     src={images.logo.url}
@@ -56,7 +58,7 @@ export default function Footer() {
               </Link>
             </div>
             <p style={{ color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0 0 20px 0' }}>
-              Professionellt entreprenadföretag med Habo som utgångspunkt. Vi utför alla typer av entreprenad och markarbeten med stor precision.
+              Professionellt entreprenadföretag med Habo som utgångspunkt. Vi utför alla typer av entreprenad- och markarbeten med stor precision.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {socialIcons.map(({ Icon, label, href }) => (
