@@ -21,7 +21,7 @@ const accentLine: React.CSSProperties = {
 
 const teamMembers = [
   {
-    role: 'Ägare – Entreprenadansvarig & Företagsledare',
+    role: 'Ägare och Företagsledare',
     name: 'Mattias Lieberg',
     photo: 'https://i.imgur.com/TZOwaqs.png',
     objectPosition: 'center 30%',
@@ -75,7 +75,7 @@ const pillars = [
 export default function About() {
   usePageTitle(
     'Om MGA Markarbeten AB | Vår Historia & Vision',
-    'Läs om MGA Markarbeten AB – grundat 2011 av Mattias Lieberg. Vi är ditt lokala entreprenadföretag i Habo & Jönköping för murar, dränering och trädgårdsanläggning.'
+    'Läs om MGA Markarbeten AB grundat 2011 av Mattias Lieberg. Vi är ditt lokala entreprenadföretag i Habo och Jönköping för anläggning, bygg och dränering.'
   );
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -106,7 +106,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={150}>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', margin: '0 auto', maxWidth: '600px' }}>
-                Med passion för skapande och trädgårdsdrömmar sedan 2011 – Med Habo och Jönköping som hemmaplan.
+                Med passion för skapande och trädgårdsdrömmar sedan 2011 med Habo och Jönköping som hemmaplan.
               </p>
             </ScrollReveal>
           </div>
@@ -172,7 +172,7 @@ export default function About() {
                     margin: '0 0 18px 0',
                     fontWeight: 500,
                   }}>
-                    Hos oss på MGA Markarbeten AB finns det utrymme för alla visioner och behov! Vi hjälper dig att förverkliga dina drömmar för utemiljön — oavsett om det gäller ståtliga murar, dränering, stensättning eller kompletta tomtanläggningar.
+                    Hos oss på MGA Markarbeten AB finns det utrymme för alla visioner och behov! Vi hjälper dig att förverkliga dina drömmar för utemiljön, oavsett om det gäller ståtliga murar, dränering, stensättning eller kompletta tomtanläggningar.
                   </p>
                   
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-text-dark)', margin: '28px 0 12px 0' }}>
@@ -192,7 +192,7 @@ export default function About() {
                     lineHeight: 1.8,
                     margin: '0 0 16px 0',
                   }}>
-                    I takt med att uppdragen blev fler utökades verksamheten med fler skickliga kollegor. År 2020 ombildades bolaget till Aktiebolag under namnet <strong>MGA Markarbeten AB</strong> — där MGA stolt står kvar vid rötterna från Mattias Grönytor och Anläggningstjänst.
+                    I takt med att uppdragen blev fler utökades verksamheten med fler skickliga kollegor. År 2020 ombildades bolaget till Aktiebolag under namnet <strong>MGA Markarbeten AB</strong>, där MGA stolt står kvar vid rötterna från Mattias Grönytor och Anläggningstjänst.
                   </p>
 
                   <p style={{
@@ -228,7 +228,7 @@ export default function About() {
                       fontSize: '0.9rem',
                       display: 'block',
                     }}>
-                      — Mattias Lieberg, VD & Entreprenadansvarig
+                      Mattias Lieberg, VD och Entreprenadansvarig
                     </span>
                   </div>
 

@@ -18,7 +18,7 @@ const faqItems = [
   },
   {
     question: 'Hur lång tid tar det att få ett prisförslag?',
-    answer: 'Vi brukar återkomma med en offert inom 1–3 arbetsdagar efter platsbesöket, beroende på projektets omfattning.',
+    answer: 'Vi brukar återkomma med en offert inom 1 till 3 arbetsdagar efter platsbesöket, beroende på projektets omfattning.',
   },
   {
     question: 'Tar ni på er jobb utanför Habo?',
@@ -310,7 +310,7 @@ export default function Contact() {
             dark={true}
             items={faqItems}
             title="Vanliga frågor"
-            subtitle="Svar på det vi ofta får höra. Hittar du inte svaret – ring oss bara!"
+            subtitle="Svar på det vi ofta får höra. Hittar du inte svaret, ring oss gärna direkt!"
             buttonText="Skicka meddelande"
             buttonLink="/kontakt"
           />

@@ -25,8 +25,8 @@ const container: React.CSSProperties = {
 
 export default function Home() {
   usePageTitle(
-    'MGA Markarbeten AB | Entreprenad & Markarbete – Habo',
-    'Vi på MGA Markarbeten AB utför alla typer av entreprenad-, mark-, betong-, pool- och anläggningsarbeten i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
+    'MGA Markarbeten AB | Anläggning, Bygg & Dränering i Habo',
+    'Vi på MGA Markarbeten AB utför alla typer av anläggning, bygg, dränering och trädfällning i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);
@@ -234,7 +234,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Din entreprenör i Habo — markarbeten, betong, dränering och maskinuthyrning med hantverk som syns i varje detalj.
+                Din kompletta entreprenör i Habo och Jönköping för anläggning, bygg, dränering och trädfällning med gediget hantverk i varje detalj.
               </p>
             </ScrollReveal>
 
@@ -410,7 +410,7 @@ export default function Home() {
                   lineHeight: 1.2,
                   margin: '0 0 14px 0',
                 }}>
-                  Stabila grunder – för säkra byggprojekt
+                  Stabila grunder för säkra byggprojekt
                 </h2>
               </ScrollReveal>
               <ScrollReveal animation="scale-x-left" delay={200} duration={0.6}>
@@ -430,7 +430,7 @@ export default function Home() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {[
                     'Bred kompetens från schakt till färdigt hantverk',
-                    'Tydliga fasta priser och möjlighet till ROT-avdrag',
+                    'Tydliga fasta priser och möjlighet till ROT avdrag',
                     'Erfarna och certifierade yrkesarbetare',
                     'Modern maskinpark anpassad för alla tomter',
                   ].map((item, i) => (

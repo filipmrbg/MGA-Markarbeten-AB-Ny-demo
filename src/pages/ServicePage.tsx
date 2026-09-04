@@ -79,7 +79,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
           margin: 0,
           fontFamily: 'var(--font-family)',
         }}>
-          Begär offert – {serviceTitle.split('&')[0].trim()}
+          Begär offert för {serviceTitle.split('&')[0].trim()}
         </h3>
       </div>
 
@@ -173,7 +173,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#64748b' }}>
               <Clock size={14} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
-              <span>Snabb återkoppling – inom 24h</span>
+              <span>Snabb återkoppling inom 24h</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#64748b' }}>
               <ShieldCheck size={14} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
