@@ -83,7 +83,7 @@ export default function About() {
       {/* ── SECTION A: HERO HEADER ────────────────────────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-main.webp)',
+        backgroundImage: 'url(https://i.imgur.com/Y5hfQAX.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
