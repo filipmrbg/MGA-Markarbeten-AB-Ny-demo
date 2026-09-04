@@ -152,7 +152,7 @@ export default function Home() {
                 el.playsInline = true;
               }
             }}
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260810_094024_96fb5445-a779-46f4-8d2c-49541bf52de9.mp4"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260904_195041_73807493-4fb3-4109-b8e9-7674b6947a13.mp4"
             preload="auto"
             autoPlay
             loop
