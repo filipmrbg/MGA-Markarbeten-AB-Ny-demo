@@ -35,26 +35,29 @@ export default function Footer() {
           gap: '40px',
         }}>
           <div>
-            <div style={{ marginBottom: '24px' }}>
-              <Link to="/" onClick={handleLogoClick} style={{ textDecoration: 'none', display: 'inline-block', cursor: 'pointer' }}>
-                <div style={{
+            <div style={{ marginBottom: '20px' }}>
+              <Link
+                to="/"
+                onClick={handleLogoClick}
+                style={{
+                  textDecoration: 'none',
                   display: 'inline-block',
-                  background: '#ffffff',
-                  padding: '8px 16px',
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
-                }}>
-                  <img
-                    src={images.logo.url}
-                    alt={images.logo.alt}
-                    style={{
-                      height: '48px',
-                      width: 'auto',
-                      display: 'block',
-                      objectFit: 'contain',
-                    }}
-                  />
-                </div>
+                  cursor: 'pointer',
+                  transition: 'opacity 0.2s ease',
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.82')}
+                onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '1')}
+              >
+                <img
+                  src={images.logo.url}
+                  alt={images.logo.alt}
+                  style={{
+                    height: '52px',
+                    width: 'auto',
+                    display: 'block',
+                    objectFit: 'contain',
+                  }}
+                />
               </Link>
             </div>
             <p style={{ color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0 0 20px 0' }}>
