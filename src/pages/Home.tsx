@@ -224,7 +224,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Utför grundarbeten, trädgårdsanläggning och byggtjänster.
+                Utför grundarbeten, trädgårdsanläggning och byggtjänster. Vi tar hand om hela projektet från planering till färdigställt resultat.
               </p>
             </ScrollReveal>
 
