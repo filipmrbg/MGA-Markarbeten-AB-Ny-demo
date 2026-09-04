@@ -184,7 +184,7 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'flex-start',
             textAlign: 'left',
-            maxWidth: '880px',
+            maxWidth: '1080px',
             margin: '0',
             paddingTop: '60px',
             paddingBottom: '40px',
@@ -210,7 +210,7 @@ export default function Home() {
               <h1 style={{
                 fontFamily: "'Bebas Neue', 'Oswald', sans-serif",
                 color: '#ffffff',
-                fontSize: 'clamp(2.4rem, 6vw, 5.2rem)',
+                fontSize: 'clamp(2.8rem, 7.8vw, 6.6rem)',
                 fontWeight: 400,
                 lineHeight: 1.0,
                 textTransform: 'uppercase',
