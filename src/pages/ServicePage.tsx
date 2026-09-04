@@ -219,10 +219,15 @@ export default function ServicePage() {
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="service-hero-section" style={{
         background: 'var(--color-dark)',
-        paddingTop: '140px',
+        paddingTop: '150px',
         paddingBottom: '70px',
+        minHeight: '340px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
+        boxSizing: 'border-box',
       }}>
         {/* Subtle grid pattern */}
         <div style={{

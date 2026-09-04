@@ -52,16 +52,21 @@ export default function ServicesOverview() {
       {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(https://i.imgur.com/kKg4GMh.png)',
+        backgroundImage: 'url(https://i.imgur.com/u5CQA2Z.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center 35%',
+        backgroundPosition: 'center 50%',
         paddingTop: '150px',
         paddingBottom: '70px',
+        minHeight: '340px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         textAlign: 'center',
+        boxSizing: 'border-box',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.78)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0, 0, 0, 0.65)' }} />
 
-        <div style={{ ...container, position: 'relative', zIndex: 1 }}>
+        <div style={{ ...container, position: 'relative', zIndex: 1, width: '100%' }}>
           <ScrollReveal animation="blur-in">
             <h1 style={{
               color: 'var(--color-white)',

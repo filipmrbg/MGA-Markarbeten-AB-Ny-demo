@@ -74,12 +74,17 @@ export default function Contact() {
         backgroundImage: 'url(/hero-contact-mj.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        paddingTop: '140px',
-        paddingBottom: '60px',
+        paddingTop: '150px',
+        paddingBottom: '70px',
+        minHeight: '340px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         textAlign: 'center',
+        boxSizing: 'border-box',
       }}>
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
-        <div style={{ ...container, position: 'relative', zIndex: 1 }}>
+        <div style={{ ...container, position: 'relative', zIndex: 1, width: '100%' }}>
           <div>
             <ScrollReveal animation="blur-in">
               <h1 style={{
