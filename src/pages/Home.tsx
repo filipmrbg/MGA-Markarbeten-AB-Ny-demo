@@ -503,13 +503,9 @@ export default function Home() {
                       <h3 className="spaced-tile-title">
                         {svc.title}
                       </h3>
-                      <p className="spaced-tile-desc">
-                        {svc.shortDescription}
-                      </p>
                     </div>
-                    <div className="spaced-tile-right" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <div className="spaced-tile-right">
                       <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.6)', fontWeight: 500, letterSpacing: '0.02em' }}>Läs mer</span>
-                      <span className="spaced-tile-action">Begär offert</span>
                     </div>
                   </div>
                 </Link>
@@ -732,30 +728,9 @@ export default function Home() {
           letter-spacing: -0.01em;
           text-shadow: 0 2px 8px rgba(0,0,0,0.8);
         }
-        .spaced-tile-desc {
-          color: rgba(255, 255, 255, 0.84);
-          font-size: 0.82rem;
-          line-height: 1.4;
-          margin: 6px 0 0 0;
-          max-width: 320px;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-        }
         .spaced-tile-right {
           flex-shrink: 0;
           margin-left: 12px;
-        }
-        .spaced-tile-action {
-          color: rgba(255, 255, 255, 0.85);
-          font-size: 0.82rem;
-          font-weight: 600;
-          transition: color 0.3s ease;
-        }
-        .spaced-tile:hover .spaced-tile-action {
-          color: var(--color-primary);
         }
 
         .steps-grid-wrapper {
