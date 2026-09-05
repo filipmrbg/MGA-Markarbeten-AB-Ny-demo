@@ -54,44 +54,31 @@ export default function ServicesOverview() {
         position: 'relative',
         backgroundImage: 'url(https://i.imgur.com/u5CQA2Z.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center 50%',
-        paddingTop: '150px',
-        paddingBottom: '70px',
-        minHeight: '340px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundPosition: 'center',
+        paddingTop: '140px',
+        paddingBottom: '60px',
         textAlign: 'center',
-        boxSizing: 'border-box',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0, 0, 0, 0.65)' }} />
-
-        <div style={{ ...container, position: 'relative', zIndex: 1, width: '100%' }}>
-          <ScrollReveal animation="blur-in">
-            <h1 style={{
-              color: 'var(--color-white)',
-              fontWeight: 800,
-              fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)',
-              margin: '0 0 16px 0',
-              lineHeight: 1.15,
-            }}>
-              Våra Tjänster
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal animation="scale-x-center" delay={150} duration={0.6}>
-            <span style={{ display: 'block', width: '60px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '14px auto 0' }} />
-          </ScrollReveal>
-          <ScrollReveal animation="fade-up" delay={200}>
-            <p style={{
-              color: 'rgba(255,255,255,0.85)',
-              fontSize: '1.08rem',
-              maxWidth: '640px',
-              margin: '20px auto 0',
-              lineHeight: 1.65,
-            }}>
-              Vi på MGA Markarbeten AB erbjuder kompletta lösningar för din fastighet i Habo och Jönköping.
-            </p>
-          </ScrollReveal>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
+        <div style={{ ...container, position: 'relative', zIndex: 1 }}>
+          <div>
+            <ScrollReveal animation="blur-in">
+              <h1 style={{
+                color: 'var(--color-white)',
+                fontWeight: 800,
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                margin: '0 0 16px 0',
+                lineHeight: 1.15,
+              }}>
+                Våra Tjänster
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={150}>
+              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', margin: '0 auto', maxWidth: '600px' }}>
+                Vi på MGA Markarbeten AB erbjuder kompletta lösningar för din fastighet i Habo och Jönköping.
+              </p>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

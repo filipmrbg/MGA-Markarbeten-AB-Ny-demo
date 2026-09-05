@@ -185,18 +185,4 @@ The goal is to keep the project clean, lightweight, and free from unused templat
 Copy and paste the following into the AI chat:
 
 ```text
-Ensure that the website displays correct and consistent company information everywhere, especially for SEO and social link previews.
-
-Scan the entire project and identify all sources of metadata and structured data, including:
-- <title> and meta description in index.html
-- Open Graph tags (og:title, og:description, og:site_name, og:url, og:image)
-- Twitter Card tags
-- JSON-LD (Organization / LocalBusiness schema)
-- Manifests or config files that inject metadata
-
-Remove all outdated, duplicated, or conflicting company information and ensure that only the current, correct company name and location are used consistently across all metadata.
-
-Use the information provided in the previous bricks to populate all metadata fields and ensure consistency across the entire project.
-
-Use absolute URLs where required, ensure all required meta tags are present, and confirm that SEO results and social link previews display the correct company information.
 ```
