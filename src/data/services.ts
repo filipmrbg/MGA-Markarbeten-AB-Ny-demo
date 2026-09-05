@@ -210,15 +210,15 @@ export const services: ServiceItem[] = [
   },
   {
     slug: 'skog',
-    title: 'Skog & Trädfällning',
-    shortDescription: 'Vi har kompetensen för trädfällning, röjning och stubbfräsning. Med över 40 års erfarenhet i skog och mark.',
-    heroText: 'Säker trädfällning, tomtgallring och stubbfräsning i Habo och Jönköping med över 40 års samlad skogserfarenhet.',
-    detailedDescription: `Vi pysslar inte bara med mark och bygg, vi har även kompetensen för trädfällning, röjning och skotning. Med över 40 års erfarenhet i skog och mark tillhandahåller vi stor expertis av såväl trädfällning, gallring och röjning. Vi hjälper er att fälla trädet som har blivit alldeles för stort på baksidan och tar bort kvällssolen, så ni kan njuta av sommarkvällen igen.`,
+    title: 'Skog',
+    shortDescription: 'Vi har kompetensen för röjning, gallring och tomtvård. Med över 40 års erfarenhet i skog och mark.',
+    heroText: 'Professionella skogstjänster, gallring och tomtvård i Habo och Jönköping med över 40 års samlad skogserfarenhet.',
+    detailedDescription: `Vi pysslar inte bara med mark och bygg, vi har även kompetensen för skog, röjning och skotning. Med över 40 års erfarenhet i skog och mark tillhandahåller vi stor expertis av såväl gallring, röjning som allmän skogsvård. Vi hjälper er att öppna upp ytor och ta hand om skog och mark på bästa sätt.`,
     heroImage: 'https://i.imgur.com/eUStLab.png',
     image: 'https://i.imgur.com/eUStLab.png',
     href: '/tjanster#skog',
-    tag: 'Skog & Träd',
-    highlights: ['Trädfällning', 'Gallring & röjning', 'Stubbfräsning'],
+    tag: 'Skog',
+    highlights: ['Gallring & röjning', 'Skotning', 'Skogsvård'],
     sections: [
       {
         heading: 'Trädfällning',

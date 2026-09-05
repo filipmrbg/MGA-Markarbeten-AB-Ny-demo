@@ -26,7 +26,7 @@ const container: React.CSSProperties = {
 export default function Home() {
   usePageTitle(
     'MGA Markarbeten AB | Anläggning, Bygg & Dränering i Habo',
-    'Vi på MGA Markarbeten AB utför alla typer av anläggning, bygg, dränering och trädfällning i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
+    'Vi på MGA Markarbeten AB utför alla typer av anläggning, bygg, dränering och skog i Habo med omnejd. Kontakta oss för en kostnadsfri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);

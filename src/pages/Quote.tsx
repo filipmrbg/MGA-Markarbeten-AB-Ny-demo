@@ -196,7 +196,7 @@ export default function Quote() {
                     <option value="anlaggning">Anläggning</option>
                     <option value="bygg">Bygg</option>
                     <option value="dranering-va">Dränering & V/A</option>
-                    <option value="skog">Skog & Trädfällning</option>
+                    <option value="skog">Skog</option>
                     <option value="annat">Annat projekt</option>
                   </select>
 

@@ -15,7 +15,7 @@ const container: React.CSSProperties = {
 export default function ServicesOverview() {
   usePageTitle(
     'Våra Tjänster | MGA Markarbeten AB Habo och Jönköping',
-    'Utforska våra 4 kärntjänster: Anläggning, Bygg, Dränering & V/A samt Skog & Trädfällning i Habo och Jönköping.'
+    'Utforska våra 4 kärntjänster: Anläggning, Bygg, Dränering & V/A samt Skog i Habo och Jönköping.'
   );
 
   const { hash } = useLocation();
