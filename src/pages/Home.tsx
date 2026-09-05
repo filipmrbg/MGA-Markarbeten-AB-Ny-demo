@@ -642,6 +642,13 @@ export default function Home() {
                 stars: 5,
                 authorSub: 'Baksida, trappa & stödmur',
               },
+              {
+                name: 'Anna Bunninger',
+                location: 'Jönköping',
+                text: 'Vi är väldigt nöjda med MGA som har färdigställt hela vår trädgård med fin noggrannhet, bra kommunikation och ett väldigt fint slutresultat.',
+                stars: 5,
+                authorSub: 'Trädgårdsanläggning',
+              },
             ].map((review, i) => {
               const delay = i * 150;
               return (
