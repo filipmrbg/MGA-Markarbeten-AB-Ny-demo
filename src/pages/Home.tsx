@@ -624,13 +624,13 @@ export default function Home() {
                   <path fill="#FBBC05" d="M5.47 14.33A7.16 7.16 0 0 1 5 12c0-.8.14-1.58.39-2.33V6.44H1.31A11.96 11.96 0 0 0 0 12c0 2.05.52 4 1.31 5.67l4.16-3.34z" />
                   <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.22 0 12 0A12 12 0 0 0 1.31 6.44l4.16 3.23a7.18 7.18 0 0 1 6.53-4.92z" />
                 </svg>
-                <span style={{ fontWeight: 700, color: '#111827' }}>4.9 / 5</span>
+                <span style={{ fontWeight: 700, color: '#111827' }}>5 / 5</span>
                 <div style={{ display: 'flex', gap: '1px' }}>
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={14} fill="#FBBC05" color="#FBBC05" />
                   ))}
                 </div>
-                <span>baserat på 48 Google-omdömen</span>
+                <span>Google-omdömen</span>
               </div>
             </ScrollReveal>
           </div>
