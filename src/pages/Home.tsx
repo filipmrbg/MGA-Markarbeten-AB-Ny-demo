@@ -623,7 +623,6 @@ export default function Home() {
                 location: 'Jönköping',
                 text: 'Vi anlitade MGA för att dränera och göra om både på fram- och baksida av huset samt göra om mur och trappa. Vi är helnöjda och skulle absolut rekommendera dessa härliga och serviceinriktade killar till vänner och familj. Bra kommunikation och flexibla under resans gång när vi ändrade oss om hur vi ville ha det.',
                 stars: 5,
-                date: 'för 2 veckor sedan',
                 authorSub: 'Dränering, mur & trappa',
               },
               {
@@ -631,7 +630,6 @@ export default function Home() {
                 location: 'Jönköping',
                 text: 'Superbra! Gör exakt det dom ska. Ärliga och pålitliga. Rekommenderas starkt.',
                 stars: 5,
-                date: 'för en månad sedan',
                 authorSub: 'Markarbete',
               },
               {
@@ -639,7 +637,6 @@ export default function Home() {
                 location: 'Jönköping',
                 text: 'Vi anlitade MGA för anläggning av baksida, trappa och stödmur mot grännen. Vi kände redan i offerstadiet att vi hittat rätt entreprenör och nu när allt är färdigställt så kan vi inte bli mer nöjda med de kvalitativa resultaten! Vi rekommenderar med varm hand MGA Markarbete - och har redan vid flertalet tillfällen haft vänner och bekanta till att ta kontakt med MGA. Stort tack för samarbetet och dem överträffade förväntningarna!',
                 stars: 5,
-                date: 'för 2 månader sedan',
                 authorSub: 'Baksida, trappa & stödmur',
               },
             ].map((review, i) => {

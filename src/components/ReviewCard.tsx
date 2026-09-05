@@ -6,7 +6,7 @@ interface Review {
   location: string;
   text: string;
   stars: number;
-  date: string;
+  date?: string;
   authorSub?: string;
 }
 
@@ -105,7 +105,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
         </div>
       </div>
 
-      {/* Stars & Relative Date */}
+      {/* Stars */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <div style={{ display: 'flex', gap: '2px' }}>
           {Array.from({ length: 5 }).map((_, i) => (
@@ -118,9 +118,6 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
             />
           ))}
         </div>
-        <span style={{ fontSize: '0.75rem', color: '#888888' }}>
-          {date}
-        </span>
       </div>
 
       {/* Review Text */}
