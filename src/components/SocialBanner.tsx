@@ -22,22 +22,49 @@ const instagramEmbeds = [
 
 export default function SocialBanner() {
   useEffect(() => {
+    let cancelled = false;
+
     const processEmbeds = () => {
+      if (cancelled) return;
       if ((window as any).instgrm?.Embeds) {
         (window as any).instgrm.Embeds.process();
       }
     };
 
-    if (!document.getElementById('instagram-embed-script')) {
-      const script = document.createElement('script');
-      script.id = 'instagram-embed-script';
-      script.src = '//www.instagram.com/embed.js';
-      script.async = true;
-      script.onload = processEmbeds;
-      document.body.appendChild(script);
-    } else {
-      processEmbeds();
-    }
+    const ensureScript = () => {
+      const existing = document.getElementById('instagram-embed-script');
+      if (existing) {
+        if ((window as any).instgrm?.Embeds) {
+          processEmbeds();
+        } else {
+          existing.addEventListener('load', processEmbeds, { once: true });
+        }
+      } else {
+        const script = document.createElement('script');
+        script.id = 'instagram-embed-script';
+        script.src = 'https://www.instagram.com/embed.js';
+        script.async = true;
+        script.onload = processEmbeds;
+        document.body.appendChild(script);
+      }
+    };
+
+    ensureScript();
+
+    const t1 = setTimeout(processEmbeds, 800);
+    const t2 = setTimeout(processEmbeds, 2000);
+    const t3 = setTimeout(processEmbeds, 4000);
+
+    const observer = new MutationObserver(() => processEmbeds());
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      cancelled = true;
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+      observer.disconnect();
+    };
   }, []);
 
   return (
