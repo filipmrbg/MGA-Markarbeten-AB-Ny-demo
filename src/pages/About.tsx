@@ -1,3 +1,4 @@
+import { ShieldCheck, Leaf, HardHat } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import Button from '../components/Button';
 import CTABanner from '../components/CTABanner';
@@ -246,6 +247,84 @@ export default function About() {
 
 
 
+      {/* ── SECTION C: POLICIES ─────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: 'clamp(70px, 9vw, 100px) 0', borderTop: '1px solid #f1f5f9' }}>
+        <div style={{ ...container, maxWidth: '1140px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <ScrollReveal animation="blur-in">
+              <h2 style={{
+                color: 'var(--color-text-dark)',
+                fontWeight: 800,
+                fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
+                margin: '0 0 14px 0',
+                letterSpacing: '-0.02em',
+              }}>
+                Våra policys
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal animation="scale-x-center" delay={200} duration={0.6}>
+              <span style={{ ...accentLine, margin: '14px auto 16px' }} />
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={150}>
+              <p style={{
+                color: 'var(--color-gray-600)',
+                fontSize: '1.02rem',
+                lineHeight: 1.7,
+                maxWidth: '620px',
+                margin: '0 auto',
+              }}>
+                Vi arbetar aktivt med kvalitet, miljö och arbetsmiljö för att säkerställa högsta standard i allt vi gör.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="policy-grid" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '28px',
+          }}>
+            {/* Card 1: Kvalitetspolicy */}
+            <ScrollReveal animation="fade-up" delay={0}>
+              <div className="policy-card">
+                <div className="policy-icon-wrap" style={{ background: 'rgba(37, 99, 235, 0.09)', color: '#2563eb' }}>
+                  <ShieldCheck size={26} strokeWidth={2.2} />
+                </div>
+                <h3 className="policy-card-title">Kvalitetspolicy</h3>
+                <p className="policy-card-text">
+                  Kvalitetsbegrepp ska genomsyra samtliga delar av vår verksamhet. Vårt ledningssystem säkerställer att vi har ett gemensamt arbetssätt, efterföljer rådande lagar och regler samt strävar efter ständig förbättring.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 2: Miljöpolicy */}
+            <ScrollReveal animation="fade-up" delay={100}>
+              <div className="policy-card">
+                <div className="policy-icon-wrap" style={{ background: 'rgba(22, 163, 74, 0.09)', color: '#16a34a' }}>
+                  <Leaf size={26} strokeWidth={2.2} />
+                </div>
+                <h3 className="policy-card-title">Miljöpolicy</h3>
+                <p className="policy-card-text">
+                  Miljön är av stor vikt i vårt verksamhetsutövande. Vi efterföljer rådande lagar och regler avseende miljö och hållbarhet genom en uppdaterad och underhållen maskinpark som framförs ansvarsfullt och genomtänkt.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 3: Arbetsmiljöpolicy */}
+            <ScrollReveal animation="fade-up" delay={200}>
+              <div className="policy-card">
+                <div className="policy-icon-wrap" style={{ background: 'rgba(234, 88, 12, 0.09)', color: 'var(--color-primary)' }}>
+                  <HardHat size={26} strokeWidth={2.2} />
+                </div>
+                <h3 className="policy-card-title">Arbetsmiljöpolicy</h3>
+                <p className="policy-card-text">
+                  Genom samverkan och regelbundna dialoger med våra medarbetare säkerställer vi en hälsosam arbetsmiljö. Vårt systematiska arbetsmiljöarbete bedrivs såväl aktivt som proaktivt.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION D: TEAM ───────────────────────────────────── */}
       <section style={{ background: 'var(--color-light)', padding: '100px 0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 clamp(20px, 5vw, 40px)' }}>
@@ -349,6 +428,55 @@ export default function About() {
       <CTABanner />
 
       <style>{`
+        .policy-card {
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
+          border-radius: 16px;
+          padding: 36px 28px;
+          box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+          height: 100%;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .policy-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(234, 88, 12, 0.35);
+          box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+        }
+        .policy-icon-wrap {
+          width: 54px;
+          height: 54px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 22px;
+          flex-shrink: 0;
+          transition: transform 0.3s ease;
+        }
+        .policy-card:hover .policy-icon-wrap {
+          transform: scale(1.08);
+        }
+        .policy-card-title {
+          font-size: 1.25rem;
+          font-weight: 750;
+          color: var(--color-text-dark);
+          margin: 0 0 14px 0;
+          line-height: 1.3;
+          letter-spacing: -0.01em;
+        }
+        .policy-card-text {
+          font-size: 0.94rem;
+          color: var(--color-gray-600);
+          line-height: 1.7;
+          margin: 0;
+        }
+        @media (max-width: 768px) {
+          .policy-grid { grid-template-columns: 1fr !important; }
+        }
         .about-hero-img-wrap:hover .about-hero-img {
           transform: scale(1.03);
         }
