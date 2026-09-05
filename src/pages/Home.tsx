@@ -619,31 +619,28 @@ export default function Home() {
           <div className="reviews-grid">
             {[
               {
-                name: 'Johan Kvist',
-                location: 'Habo',
-                text: 'Anlitade MGA Markarbeten för mark- och grundarbetet inför vårt husbygge i Habo. Maskinföraren var otroligt skicklig och noggrann, och allt blev klart snabbare än förväntat. Kan varmt rekommenderas!',
+                name: 'Lisa Berglund',
+                location: 'Jönköping',
+                text: 'Vi anlitade MGA för att dränera och göra om både på fram- och baksida av huset samt göra om mur och trappa. Vi är helnöjda och skulle absolut rekommendera dessa härliga och serviceinriktade killar till vänner och familj. Bra kommunikation och flexibla under resans gång när vi ändrade oss om hur vi ville ha det.',
                 stars: 5,
                 date: 'för 2 veckor sedan',
-                authorSub: 'Lokal guide • 8 omdömen',
-                avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120&h=120'
+                authorSub: 'Dränering, mur & trappa',
               },
               {
-                name: 'Karin Wallin',
-                location: 'Helsingborg',
-                text: 'Vi behövde hyra en anläggningsmaskin med förare för schaktning och tomtplanering vid stugan. Riktigt bra kommunikation från första kontakt till färdigt jobb, och tomten blev supersnygg.',
+                name: 'Christopher Lindberg',
+                location: 'Jönköping',
+                text: 'Superbra! Gör exakt det dom ska. Ärliga och pålitliga. Rekommenderas starkt.',
                 stars: 5,
                 date: 'för en månad sedan',
-                authorSub: '5 omdömen',
-                avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120&h=120'
+                authorSub: 'Markarbete',
               },
               {
-                name: 'Anders Gustavsson',
-                location: 'Lund',
-                text: 'Proffsigt utfört grundarbete för vårt nya garage. Tydlig kalkyl utan konstigheter och tidsplanen hölls till punkt och pricka. Kommer definitivt anlita dem igen för framtida markarbeten.',
+                name: 'Benjamin Birol',
+                location: 'Jönköping',
+                text: 'Vi anlitade MGA för anläggning av baksida, trappa och stödmur mot grännen. Vi kände redan i offerstadiet att vi hittat rätt entreprenör och nu när allt är färdigställt så kan vi inte bli mer nöjda med de kvalitativa resultaten! Vi rekommenderar med varm hand MGA Markarbete - och har redan vid flertalet tillfällen haft vänner och bekanta till att ta kontakt med MGA. Stort tack för samarbetet och dem överträffade förväntningarna!',
                 stars: 5,
                 date: 'för 2 månader sedan',
-                authorSub: 'Lokal guide • 14 omdömen',
-                avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120'
+                authorSub: 'Baksida, trappa & stödmur',
               },
             ].map((review, i) => {
               const delay = i * 150;
