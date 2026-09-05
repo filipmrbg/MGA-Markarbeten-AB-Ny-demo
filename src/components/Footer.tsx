@@ -3,9 +3,10 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import images from '../data/images';
 
 const serviceLinks = [
-  { label: 'Markarbete & Schaktning', href: '/tjanster/markarbete' },
-  { label: 'Dränering & Fuktskydd', href: '/tjanster/dranering' },
-  { label: 'Betong & Grundläggning', href: '/tjanster/betong' },
+  { label: 'Anläggning', href: '/tjanster/anlaggning' },
+  { label: 'Bygg', href: '/tjanster/bygg' },
+  { label: 'Dränering & V/A', href: '/tjanster/dranering-va' },
+  { label: 'Skog & Trädfällning', href: '/tjanster/skog' },
 ];
 
 const socialIcons = [

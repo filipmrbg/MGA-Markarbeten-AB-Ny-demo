@@ -189,22 +189,15 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
 
-  const normalizedSlug = useMemo(() => {
-    if (!slug) return '';
-    const clean = slug.toLowerCase().trim().replace(/-/g, '').replace(/_/g, '');
-    if (clean.includes('mark') || clean.includes('schakt')) return 'markarbete';
-    if (clean.includes('dran') || clean.includes('drän') || clean.includes('fukt')) return 'dranering';
-    if (clean.includes('betong') || clean.includes('grund')) return 'betong';
-    return clean;
+  const service = useMemo(() => {
+    return services.find(s => s.slug === slug) || services[0];
   }, [slug]);
-
-  const service = services.find(s => s.slug === normalizedSlug) || services.find(s => s.slug === slug) || services[0];
 
   useEffect(() => {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-  }, [slug, normalizedSlug]);
+  }, [slug]);
 
   usePageTitle(
     `${service.title} | MGA Markarbeten AB`,
