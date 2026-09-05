@@ -210,7 +210,7 @@ export const services: ServiceItem[] = [
   },
   {
     slug: 'skog',
-    title: 'Skog',
+    title: 'Skog & Trädfällning',
     shortDescription: 'Vi har kompetensen för trädfällning, röjning och stubbfräsning. Med över 40 års erfarenhet i skog och mark.',
     heroText: 'Säker trädfällning, tomtgallring och stubbfräsning i Habo och Jönköping med över 40 års samlad skogserfarenhet.',
     detailedDescription: `Vi pysslar inte bara med mark och bygg, vi har även kompetensen för trädfällning, röjning och skotning. Med över 40 års erfarenhet i skog och mark tillhandahåller vi stor expertis av såväl trädfällning, gallring och röjning. Vi hjälper er att fälla trädet som har blivit alldeles för stort på baksidan och tar bort kvällssolen, så ni kan njuta av sommarkvällen igen.`,
