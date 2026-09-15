@@ -9,6 +9,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Quote = lazy(() => import('./pages/Quote'));
 const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const ServicePage = lazy(() => import('./pages/ServicePage'));
+const Gallery = lazy(() => import('./pages/Gallery'));
 const Animations = lazy(() => import('./pages/Animations'));
 
 function ScrollToTop() {
@@ -66,6 +67,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
           <Route path="/tjanster" element={<PageWrapper><ServicesOverview /></PageWrapper>} />
+          <Route path="/galleri" element={<PageWrapper><Gallery /></PageWrapper>} />
           <Route path="/om-oss" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/kontakt" element={<PageWrapper><Contact /></PageWrapper>} />
           <Route path="/offert" element={<PageWrapper><Quote /></PageWrapper>} />

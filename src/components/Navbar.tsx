@@ -7,6 +7,7 @@ import services from '../data/services';
 const navLinks = [
   { label: 'Hem', href: '/' },
   { label: 'Tjänster', href: '/tjanster', hasDropdown: true },
+  { label: 'Galleri', href: '/galleri' },
   { label: 'Om oss', href: '/om-oss' },
   { label: 'Kontakt', href: '/kontakt' },
 ];
