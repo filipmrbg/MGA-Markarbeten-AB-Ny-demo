@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Phone, MapPin, Mail } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import FAQAccordion from '../components/FAQAccordion';
+import SocialFollowBanner from '../components/SocialFollowBanner';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
 
@@ -316,6 +317,9 @@ export default function Contact() {
           />
         </div>
       </section>
+
+      {/* ── SECTION D: SOCIAL FOLLOW DIVIDER ──────────────────── */}
+      <SocialFollowBanner />
 
       <CTABanner />
 
