@@ -51,6 +51,7 @@ const teamMembers = [
     role: 'Bygg & Anläggning',
     name: 'Emil Antonijev',
     photo: 'https://i.imgur.com/WlpQoJX.jpeg',
+    objectPosition: '32% 15%',
   },
 ];
 
