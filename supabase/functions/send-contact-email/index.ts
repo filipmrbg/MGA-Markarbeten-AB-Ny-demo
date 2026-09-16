@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 const RECIPIENT_EMAIL = "mattias@mgamark.se";
-const SENDER_EMAIL = "Kontaktformulär <info@mgamark.se>";
+const SENDER_EMAIL = "Kontaktformulär <info@contact.bgbygger.se>";
 
 function formatSwedishDateTime(): string {
   const now = new Date();
