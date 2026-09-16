@@ -321,11 +321,11 @@ export default function Contact() {
                     onBlur={blurInput}
                   >
                     <option value="">Välj tjänst...</option>
-                    <option value="anlaggning">Anläggning</option>
-                    <option value="bygg">Bygg</option>
-                    <option value="dranering-va">Dränering & V/A</option>
-                    <option value="skog">Skog</option>
-                    <option value="annat">Annat projekt</option>
+                    <option value="Anläggning">Anläggning</option>
+                    <option value="Bygg">Bygg</option>
+                    <option value="Dränering & V/A">Dränering & V/A</option>
+                    <option value="Skog">Skog</option>
+                    <option value="Annat projekt">Annat projekt</option>
                   </select>
 
                   <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
