@@ -116,8 +116,8 @@ const images: SiteImages = {
 
   about: {
     hero: {
-      url: '/optimized/about-hero.webp',
-      alt: 'MGA Markarbeten AB',
+      url: '/mga-logo.png',
+      alt: 'MGA Markarbeten AB – företagslogo',
     },
     teamMember: {
       url: '/optimized/team-mattias.webp',
