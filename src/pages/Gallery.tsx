@@ -6,18 +6,18 @@ import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const galleryImages = [
-  { src: 'https://i.imgur.com/qqH2wjc.png', alt: 'Projektbild 1' },
-  { src: 'https://i.imgur.com/Zxi0lFY.png', alt: 'Projektbild 2' },
-  { src: 'https://i.imgur.com/iOZ3fKq.png', alt: 'Projektbild 3' },
-  { src: 'https://i.imgur.com/0VrSAI4.png', alt: 'Projektbild 4' },
-  { src: 'https://i.imgur.com/GBa078V.png', alt: 'Projektbild 5' },
-  { src: 'https://i.imgur.com/6ADPwFZ.png', alt: 'Projektbild 6' },
-  { src: 'https://i.imgur.com/CJCgrPR.png', alt: 'Projektbild 7' },
-  { src: 'https://i.imgur.com/SK4JWyV.png', alt: 'Projektbild 8' },
-  { src: 'https://i.imgur.com/kdHfJcA.png', alt: 'Projektbild 9' },
-  { src: 'https://i.imgur.com/9AC8ILh.png', alt: 'Projektbild 10' },
-  { src: 'https://i.imgur.com/DTx1FEI.png', alt: 'Projektbild 11' },
-  { src: 'https://i.imgur.com/P9ulbcY.png', alt: 'Projektbild 12' },
+  { src: '/optimized/gallery-item-1.webp', alt: 'Projektbild 1' },
+  { src: '/optimized/gallery-item-2.webp', alt: 'Projektbild 2' },
+  { src: '/optimized/gallery-item-3.webp', alt: 'Projektbild 3' },
+  { src: '/optimized/gallery-item-4.webp', alt: 'Projektbild 4' },
+  { src: '/optimized/gallery-item-5.webp', alt: 'Projektbild 5' },
+  { src: '/optimized/gallery-item-6.webp', alt: 'Projektbild 6' },
+  { src: '/optimized/gallery-item-7.webp', alt: 'Projektbild 7' },
+  { src: '/optimized/gallery-item-8.webp', alt: 'Projektbild 8' },
+  { src: '/optimized/gallery-item-9.webp', alt: 'Projektbild 9' },
+  { src: '/optimized/gallery-item-10.webp', alt: 'Projektbild 10' },
+  { src: '/optimized/gallery-item-11.webp', alt: 'Projektbild 11' },
+  { src: '/optimized/gallery-item-12.webp', alt: 'Projektbild 12' },
 ];
 
 const container: React.CSSProperties = {
@@ -109,7 +109,7 @@ export default function Gallery() {
       {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(https://i.imgur.com/u5CQA2Z.png)',
+        backgroundImage: 'url(/optimized/services-gallery-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '150px',
@@ -165,6 +165,7 @@ export default function Gallery() {
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </ScrollReveal>

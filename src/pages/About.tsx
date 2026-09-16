@@ -24,33 +24,33 @@ const teamMembers = [
   {
     role: 'Ägare och Företagsledare',
     name: 'Mattias Lieberg',
-    photo: 'https://i.imgur.com/TZOwaqs.png',
+    photo: '/optimized/team-mattias.webp',
     objectPosition: 'center 30%',
   },
   {
     role: 'Anläggare',
     name: 'Joel Forsman',
-    photo: 'https://i.imgur.com/DSxbqCV.png',
+    photo: '/optimized/team-johan.webp',
   },
   {
     role: 'Maskin & Anläggning',
     name: 'William Wymark',
-    photo: 'https://i.imgur.com/JVsQMgW.png',
+    photo: '/optimized/team-alexander.webp',
   },
   {
     role: 'Bygg & Anläggning',
     name: 'Rasmus Ahlrichs',
-    photo: 'https://i.imgur.com/i1KNHpq.png',
+    photo: '/optimized/team-marcus.webp',
   },
   {
     role: 'Skog, Trädgård & Anläggning',
     name: 'Reine Lieberg',
-    photo: 'https://i.imgur.com/VUIOJiY.png',
+    photo: '/optimized/team-erik.webp',
   },
   {
     role: 'Bygg & Anläggning',
     name: 'Emil Antonijev',
-    photo: 'https://i.imgur.com/WlpQoJX.jpeg',
+    photo: '/optimized/team-samuel.webp',
     objectPosition: '32% 15%',
   },
 ];
@@ -85,7 +85,7 @@ export default function About() {
       {/* ── SECTION A: HERO HEADER ────────────────────────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(https://i.imgur.com/Y5hfQAX.png)',
+        backgroundImage: 'url(/optimized/about-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
@@ -376,6 +376,7 @@ export default function About() {
                       src={member.photo}
                       alt={member.name}
                       loading="lazy"
+                      decoding="async"
                       style={{
                         width: '100%',
                         height: '280px',

@@ -70,7 +70,7 @@ export interface SiteImages {
 
 const images: SiteImages = {
   logo: {
-    url: 'https://i.imgur.com/X4qER1V.png',
+    url: '/optimized/mga-logo-clean.webp',
     alt: 'MGA Markarbeten AB',
   },
 
@@ -83,24 +83,24 @@ const images: SiteImages = {
 
   services: {
     markarbete: {
-      url: '/service-markarbete.webp',
+      url: '/optimized/service-markarbete-hd.webp',
       alt: 'Grävmaskin som utför markarbete på tomt',
     },
     dranering: {
-      url: '/service-dranering.webp',
+      url: '/optimized/service-dranering-hd.webp',
       alt: 'Husgrund med nylagd dränering och isolering',
     },
     betong: {
-      url: '/service-betong.webp',
+      url: '/optimized/service-betong-hd.webp',
       alt: 'Nygjuten betongplatta till husgrund med formar',
     },
   },
 
   gallery: [
-    { url: '/gallery-external-1.webp', alt: 'MGA Markarbeten AB arbete pågår 1' },
-    { url: '/gallery-external-2.webp', alt: 'MGA Markarbeten AB arbete pågår 2' },
-    { url: '/gallery-external-4.webp', alt: 'MGA Markarbeten AB arbete pågår 4' },
-    { url: '/gallery-external-3.webp', alt: 'MGA Markarbeten AB arbete pågår 5' },
+    { url: '/optimized/gallery-item-1.webp', alt: 'MGA Markarbeten AB arbete pågår 1' },
+    { url: '/optimized/gallery-item-2.webp', alt: 'MGA Markarbeten AB arbete pågår 2' },
+    { url: '/optimized/gallery-item-3.webp', alt: 'MGA Markarbeten AB arbete pågår 3' },
+    { url: '/optimized/gallery-item-4.webp', alt: 'MGA Markarbeten AB arbete pågår 4' },
   ],
 
   cta: {
@@ -116,11 +116,11 @@ const images: SiteImages = {
 
   about: {
     hero: {
-      url: 'https://i.imgur.com/X4qER1V.png',
-      alt: 'MGA Markarbeten AB logotyp',
+      url: '/optimized/about-hero.webp',
+      alt: 'MGA Markarbeten AB',
     },
     teamMember: {
-      url: 'https://i.imgur.com/X4qER1V.png',
+      url: '/optimized/team-mattias.webp',
       alt: 'Teammedlem',
     },
   },

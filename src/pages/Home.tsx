@@ -376,7 +376,7 @@ export default function Home() {
               }}>
                 <video
                   ref={foundationVideoRef}
-                  src="https://i.imgur.com/fTDcor7.mp4"
+                  src="/optimized/fTDcor7.mp4"
                   preload="metadata"
                   autoPlay
                   muted
@@ -508,6 +508,7 @@ export default function Home() {
                     src={svc.image}
                     alt={svc.title}
                     loading="lazy"
+                    decoding="async"
                     className="spaced-tile-img"
                   />
                   {/* Overlay */}
@@ -565,7 +566,7 @@ export default function Home() {
               margin: '0 0 32px 0',
               lineHeight: 1.7,
             }}>
-              Vi skickar en kostnadsfri offert inom 24 timmar.
+              Vi återkommer till dig med en kostnadsfri offert så snart vi har möjlighet.
             </p>
             <Button variant="primary" size="lg" href="/offert">
               Begär offert

@@ -11,7 +11,7 @@ interface Props {
 const defaultHeading = 'Begär en kostnadsfri offert';
 const defaultCheckItems = [
   'Kostnadsfritt hembesök & offert',
-  'Snabb återkoppling inom 24 timmar',
+  'Snabb & personlig återkoppling',
   'ROT-avdrag hanteras direkt av oss',
 ];
 
@@ -155,8 +155,8 @@ export default function CTABanner({ heading = defaultHeading, checkItems = defau
                     el.playsInline = true;
                   }
                 }}
-                src="https://i.imgur.com/cQv8gpJ.mp4"
-                preload="auto"
+                src="/optimized/cQv8gpJ.mp4"
+                preload="metadata"
                 autoPlay
                 loop
                 muted
@@ -170,7 +170,7 @@ export default function CTABanner({ heading = defaultHeading, checkItems = defau
                   display: 'block',
                 }}
               >
-                <source src="https://i.imgur.com/cQv8gpJ.mp4" type="video/mp4" />
+                <source src="/optimized/cQv8gpJ.mp4" type="video/mp4" />
                 <source src="/cta-background-video.mp4" type="video/mp4" />
               </video>
             </div>

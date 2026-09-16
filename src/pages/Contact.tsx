@@ -95,7 +95,7 @@ export default function Contact() {
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={150}>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', margin: 0 }}>
-                Vi återkopplar vanligtvis inom 24 timmar. Kostnadsfritt platsbesök ingår alltid.
+                Vi återkopplar så snart vi har möjlighet. Kostnadsfritt platsbesök ingår alltid.
               </p>
             </ScrollReveal>
           </div>

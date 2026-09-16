@@ -51,6 +51,8 @@ export default function Footer() {
                 <img
                   src={images.logo.url}
                   alt={images.logo.alt}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     height: '52px',
                     width: 'auto',
@@ -123,23 +125,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/galleri"
-                  style={{
-                    color: 'var(--color-gray-600)',
-                    textDecoration: 'none',
-                    lineHeight: '2.2',
-                    fontSize: '0.95rem',
-                    display: 'inline-block',
-                    transition: 'color 0.2s ease',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
-                >
-                  Projekt & Galleri
-                </Link>
-              </li>
             </ul>
           </div>
 

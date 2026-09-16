@@ -96,7 +96,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
             Tack för din förfrågan!
           </h4>
           <p style={{ color: '#166534', fontSize: '0.9rem', margin: 0, lineHeight: 1.5 }}>
-            Vi återkommer till dig med kalkyl &amp; svar inom 24 timmar.
+            Vi återkommer till dig med kalkyl &amp; svar så snart vi har möjlighet.
           </p>
         </div>
       ) : (
@@ -173,7 +173,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#64748b' }}>
               <Clock size={14} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
-              <span>Snabb återkoppling inom 24h</span>
+              <span>Snabb & personlig återkoppling</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#64748b' }}>
               <ShieldCheck size={14} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
@@ -358,6 +358,7 @@ export default function ServicePage() {
                 <img
                   src={service.heroImage}
                   alt={service.title}
+                  decoding="async"
                   style={{
                     width: '100%',
                     maxHeight: '440px',
@@ -488,6 +489,7 @@ export default function ServicePage() {
                           src={section.image}
                           alt={section.heading}
                           loading="lazy"
+                          decoding="async"
                           style={{
                             width: '100%',
                             maxHeight: '380px',
@@ -592,6 +594,8 @@ export default function ServicePage() {
                 <img
                   src={other.heroImage}
                   alt={other.title}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '64px',
                     height: '64px',

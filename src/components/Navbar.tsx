@@ -174,6 +174,7 @@ export default function Navbar() {
           <img
             src={images.logo.url}
             alt={images.logo.alt}
+            decoding="async"
             className={`nav-logo ${scrolled ? 'scrolled' : ''}`}
           />
         </Link>

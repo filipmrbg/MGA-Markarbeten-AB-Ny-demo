@@ -52,7 +52,7 @@ export default function ServicesOverview() {
       {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(https://i.imgur.com/u5CQA2Z.png)',
+        backgroundImage: 'url(/optimized/services-gallery-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
@@ -174,6 +174,8 @@ export default function ServicesOverview() {
                         <img
                           src={svc.image}
                           alt={svc.title}
+                          loading="lazy"
+                          decoding="async"
                           style={{
                             width: '100%',
                             height: '100%',

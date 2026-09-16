@@ -72,7 +72,7 @@ export default function Quote() {
       {/* ── SECTION A: HERO ───────────────────────────────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-main.webp)',
+        backgroundImage: 'url(/optimized/quote-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
@@ -104,7 +104,7 @@ export default function Quote() {
                 margin: '20px auto 0',
                 lineHeight: 1.65,
               }}>
-                Beskriv ditt projekt nedan så återkommer vi med en kostnadsfri offert och kalkyl inom 24 timmar.
+                Beskriv ditt projekt nedan så återkommer vi med en kostnadsfri offert och kalkyl så snart vi har möjlighet.
               </p>
             </ScrollReveal>
           </div>
@@ -251,11 +251,11 @@ export default function Quote() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                     <Clock size={24} color="var(--color-primary)" />
                     <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-dark)' }}>
-                      Svar inom 24 timmar
+                      Snabb återkoppling
                     </h3>
                   </div>
                   <p style={{ margin: 0, color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                    Vi går igenom dina uppgifter direkt och skickar en tydlig kalkyl utan dolda avgifter.
+                    Vi går igenom dina uppgifter och återkopplar så snart vi har möjlighet med ett tydligt förslag.
                   </p>
                 </div>
 
