@@ -65,6 +65,43 @@ export default function Quote() {
   const [phone, setPhone]     = useState('');
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('sending');
+    try {
+      const fullMessage = service
+        ? `Tjänst: ${service}\n\n${message}`
+        : message;
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ name, email, phone, message: fullMessage, source: 'offert' }),
+      });
+      if (!response.ok) {
+        setStatus('error');
+        return;
+      }
+      const data = await response.json();
+      if (data.error) {
+        setStatus('error');
+        return;
+      }
+      setStatus('success');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setService('');
+      setMessage('');
+    } catch {
+      setStatus('error');
+    }
+  }
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -139,7 +176,7 @@ export default function Quote() {
                   Fyll i dina uppgifter
                 </h2>
 
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={handleSubmit}>
                   <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
                     Namn *
                   </label>
@@ -235,6 +272,21 @@ export default function Quote() {
                   >
                     <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
                   </button>
+                  {status === 'sending' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: 'var(--color-gray-600)', textAlign: 'center' }}>
+                      Skickar...
+                    </p>
+                  )}
+                  {status === 'success' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: '#16a34a', fontWeight: 600, textAlign: 'center' }}>
+                      Tack! Din offertförfrågan har skickats. Vi återkommer så snart vi kan.
+                    </p>
+                  )}
+                  {status === 'error' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: '#dc2626', fontWeight: 600, textAlign: 'center' }}>
+                      Något gick fel. Försök igen eller ring oss direkt på 076-177 85 70.
+                    </p>
+                  )}
                 </form>
               </div>
             </ScrollReveal>

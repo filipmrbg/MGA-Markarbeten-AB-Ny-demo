@@ -65,6 +65,39 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('sending');
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ name, email, phone, message, source: 'kontakt' }),
+      });
+      if (!response.ok) {
+        setStatus('error');
+        return;
+      }
+      const data = await response.json();
+      if (data.error) {
+        setStatus('error');
+        return;
+      }
+      setStatus('success');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } catch {
+      setStatus('error');
+    }
+  }
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -228,7 +261,7 @@ export default function Contact() {
                 borderRadius: 'var(--border-radius-lg)',
                 boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
               }}>
-                <form onSubmit={e => e.preventDefault()}>
+                <form onSubmit={handleSubmit}>
                   <input
                     type="text"
                     placeholder="Ditt namn *"
@@ -297,6 +330,21 @@ export default function Contact() {
                   >
                     Skicka meddelande
                   </button>
+                  {status === 'sending' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: 'var(--color-gray-600)', textAlign: 'center' }}>
+                      Skickar...
+                    </p>
+                  )}
+                  {status === 'success' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: '#16a34a', fontWeight: 600, textAlign: 'center' }}>
+                      Tack! Ditt meddelande har skickats. Vi återkommer så snart vi kan.
+                    </p>
+                  )}
+                  {status === 'error' && (
+                    <p style={{ marginTop: '16px', fontSize: '0.9rem', color: '#dc2626', fontWeight: 600, textAlign: 'center' }}>
+                      Något gick fel. Försök igen eller ring oss direkt på 076-177 85 70.
+                    </p>
+                  )}
                 </form>
               </div>
             </ScrollReveal>
