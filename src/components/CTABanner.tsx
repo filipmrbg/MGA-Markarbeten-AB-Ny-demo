@@ -130,7 +130,7 @@ export default function CTABanner({ heading = defaultHeading, checkItems = defau
                 ))}
               </ul>
 
-              <Button variant="primary" size="lg" href="/offert">
+              <Button variant="primary" size="lg" href="/kontakt">
                 Kom igång
               </Button>
             </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, MapPin, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail, Send } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import FAQAccordion from '../components/FAQAccordion';
 import SocialFollowBanner from '../components/SocialFollowBanner';
@@ -47,11 +47,11 @@ const inputStyle: React.CSSProperties = {
   display: 'block',
 };
 
-function focusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+function focusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
   e.currentTarget.style.borderColor = 'var(--color-primary)';
   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(234, 88, 12, 0.15)';
 }
-function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
   e.currentTarget.style.borderColor = '#e5e7eb';
   e.currentTarget.style.boxShadow = 'none';
 }
@@ -64,6 +64,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [service, setService] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
@@ -78,7 +79,7 @@ export default function Contact() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
         },
-        body: JSON.stringify({ name, email, phone, message, source: 'kontakt' }),
+        body: JSON.stringify({ name, email, phone, service, message, source: 'kontakt' }),
       });
       if (!response.ok) {
         setStatus('error');
@@ -93,6 +94,7 @@ export default function Contact() {
       setName('');
       setEmail('');
       setPhone('');
+      setService('');
       setMessage('');
     } catch {
       setStatus('error');
@@ -253,7 +255,7 @@ export default function Contact() {
                 margin: '0 0 24px 0',
                 lineHeight: 1.2,
               }}>
-                Skicka oss ett meddelande
+                Begär offert
               </h2>
               <div style={{
                 background: 'var(--color-white)',
@@ -262,73 +264,100 @@ export default function Contact() {
                 boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
               }}>
                 <form onSubmit={handleSubmit}>
+                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
+                    Namn *
+                  </label>
                   <input
                     type="text"
-                    placeholder="Ditt namn *"
+                    placeholder="Ditt för- och efternamn"
                     value={name}
-                    onChange={e => setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                     style={inputStyle}
                     onFocus={focusInput}
                     onBlur={blurInput}
                     required
                   />
+
+                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
+                    E-postadress *
+                  </label>
                   <input
                     type="email"
-                    placeholder="Din e-postadress *"
+                    placeholder="din.epost@doman.se"
                     value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                     style={inputStyle}
                     onFocus={focusInput}
                     onBlur={blurInput}
                     required
                   />
+
+                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
+                    Telefonnummer *
+                  </label>
                   <input
                     type="tel"
-                    placeholder="Ditt telefonnummer"
+                    placeholder="07X-XXX XX XX"
                     value={phone}
-                    onChange={e => setPhone(e.target.value)}
+                    onChange={(e) => setPhone(e.target.value)}
                     style={inputStyle}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                  />
-                  <textarea
-                    placeholder="Beskriv ditt ärende *"
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
-                    style={{ ...inputStyle, minHeight: '140px', resize: 'vertical', marginBottom: '24px' } as React.CSSProperties}
                     onFocus={focusInput}
                     onBlur={blurInput}
                     required
                   />
+
+                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
+                    Typ av tjänst
+                  </label>
+                  <select
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    style={{ ...inputStyle, cursor: 'pointer' }}
+                    onFocus={focusInput}
+                    onBlur={blurInput}
+                  >
+                    <option value="">Välj tjänst...</option>
+                    <option value="anlaggning">Anläggning</option>
+                    <option value="bygg">Bygg</option>
+                    <option value="dranering-va">Dränering & V/A</option>
+                    <option value="skog">Skog</option>
+                    <option value="annat">Annat projekt</option>
+                  </select>
+
+                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
+                    Projektbeskrivning *
+                  </label>
+                  <textarea
+                    rows={5}
+                    placeholder="Beskriv ditt projekt så detaljerat du kan (t.ex. yta i kvm, adress, önskad starttid)..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    style={{ ...inputStyle, resize: 'vertical', marginBottom: '24px' }}
+                    onFocus={focusInput}
+                    onBlur={blurInput}
+                    required
+                  />
+
                   <button
                     type="submit"
                     style={{
                       width: '100%',
-                      padding: '14px',
+                      padding: '16px',
                       background: 'var(--color-primary)',
                       color: '#ffffff',
-                      fontWeight: 700,
-                      fontFamily: 'var(--font-family)',
-                      fontSize: '0.95rem',
                       border: 'none',
-                      borderRadius: 'var(--border-radius-pill)',
+                      borderRadius: '12px',
+                      fontWeight: 700,
+                      fontSize: '1rem',
                       cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                    }}
-                    onMouseEnter={e => {
-                      const el = e.currentTarget as HTMLElement;
-                      el.style.background = 'var(--color-primary-hover)';
-                      el.style.transform = 'translateY(-2px)';
-                      el.style.boxShadow = '0 8px 24px rgba(234, 88, 12, 0.45)';
-                    }}
-                    onMouseLeave={e => {
-                      const el = e.currentTarget as HTMLElement;
-                      el.style.background = 'var(--color-primary)';
-                      el.style.transform = 'translateY(0)';
-                      el.style.boxShadow = 'none';
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      transition: 'transform 0.2s ease, opacity 0.2s ease',
                     }}
                   >
-                    Skicka meddelande
+                    <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
                   </button>
                   {status === 'sending' && (
                     <p style={{ marginTop: '16px', fontSize: '0.9rem', color: 'var(--color-gray-600)', textAlign: 'center' }}>
@@ -337,7 +366,7 @@ export default function Contact() {
                   )}
                   {status === 'success' && (
                     <p style={{ marginTop: '16px', fontSize: '0.9rem', color: '#16a34a', fontWeight: 600, textAlign: 'center' }}>
-                      Tack! Ditt meddelande har skickats. Vi återkommer så snart vi kan.
+                      Tack! Din offertförfrågan har skickats. Vi återkommer så snart vi kan.
                     </p>
                   )}
                   {status === 'error' && (

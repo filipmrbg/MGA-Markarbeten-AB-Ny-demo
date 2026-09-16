@@ -17,7 +17,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const inputStyle: CSSProperties = {
     width: '100%',
@@ -43,9 +43,25 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
     e.currentTarget.style.boxShadow = 'none';
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus('sending');
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ name, email, phone, service: serviceTitle, message: '', source: 'offert' }),
+      });
+      if (!response.ok) { setStatus('error'); return; }
+      const data = await response.json();
+      if (data.error) { setStatus('error'); return; }
+      setStatus('success');
+      setName(''); setEmail(''); setPhone('');
+    } catch { setStatus('error'); }
   }
 
   return (
@@ -83,7 +99,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
         </h3>
       </div>
 
-      {submitted ? (
+      {status === 'success' ? (
         <div style={{
           textAlign: 'center',
           padding: '30px 10px',
@@ -159,8 +175,13 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
               (e.currentTarget as HTMLElement).style.background = 'var(--color-primary)';
             }}
           >
-            Skicka offertförfrågan
+            {status === 'sending' ? 'Skickar...' : 'Skicka offertförfrågan'}
           </button>
+          {status === 'error' && (
+            <p style={{ marginTop: '12px', fontSize: '0.85rem', color: '#dc2626', fontWeight: 600, textAlign: 'center' }}>
+              Något gick fel. Försök igen eller ring oss på 076-177 85 70.
+            </p>
+          )}
 
           {/* Trust points inside form */}
           <div style={{

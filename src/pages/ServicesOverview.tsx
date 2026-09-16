@@ -219,7 +219,7 @@ export default function ServicesOverview() {
 
                       {/* Action Button */}
                       <Link
-                        to="/offert"
+                        to="/kontakt"
                         style={{
                           display: 'inline-flex',
                           alignItems: 'center',

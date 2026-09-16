@@ -252,7 +252,7 @@ export default function Home() {
                 gap: '16px',
                 flexWrap: 'wrap',
               }}>
-                <Button variant="primary" size="lg" href="/offert">
+                <Button variant="primary" size="lg" href="/kontakt">
                   Begär kostnadsfri offert
                 </Button>
 
@@ -568,7 +568,7 @@ export default function Home() {
             }}>
               Vi återkommer till dig med en kostnadsfri offert så snart vi har möjlighet.
             </p>
-            <Button variant="primary" size="lg" href="/offert">
+            <Button variant="primary" size="lg" href="/kontakt">
               Begär offert
             </Button>
           </ScrollReveal>

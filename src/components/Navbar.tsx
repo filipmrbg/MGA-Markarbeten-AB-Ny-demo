@@ -353,7 +353,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            to="/offert"
+            to="/kontakt"
             className="offert-btn"
             style={{
               background: 'var(--color-primary)',
@@ -505,7 +505,7 @@ export default function Navbar() {
         })}
 
         <Link
-          to="/offert"
+          to="/kontakt"
           onClick={() => setMobileOpen(false)}
           style={{
             marginTop: '12px',

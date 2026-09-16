@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -6,7 +6,6 @@ import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
-const Quote = lazy(() => import('./pages/Quote'));
 const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const ServicePage = lazy(() => import('./pages/ServicePage'));
 const Gallery = lazy(() => import('./pages/Gallery'));
@@ -70,7 +69,7 @@ export default function App() {
           <Route path="/galleri" element={<PageWrapper><Gallery /></PageWrapper>} />
           <Route path="/om-oss" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/kontakt" element={<PageWrapper><Contact /></PageWrapper>} />
-          <Route path="/offert" element={<PageWrapper><Quote /></PageWrapper>} />
+          <Route path="/offert" element={<Navigate to="/kontakt" replace />} />
           <Route path="/tjanster/:slug" element={<PageWrapper><ServicePage /></PageWrapper>} />
           <Route path="/animationer" element={<PageWrapper><Animations /></PageWrapper>} />
           <Route path="*" element={<PageWrapper><Home /></PageWrapper>} />
