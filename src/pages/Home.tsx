@@ -227,7 +227,7 @@ export default function Home() {
             {/* Huge Responsive Condensed Headline (H1) */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 className="hero-main-title">
-                MGA Markarbeten AB – Habo
+                MGA Markarbeten AB
               </h1>
             </ScrollReveal>
 

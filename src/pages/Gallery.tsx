@@ -132,7 +132,7 @@ export default function Gallery() {
             lineHeight: 1.15,
             letterSpacing: '-0.02em',
           }}>
-            Galleri – Våra projekt i Habo
+            Galleri
           </h1>
 
           <p style={{
