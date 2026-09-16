@@ -94,7 +94,7 @@ export default function SocialBanner() {
       }}>
 
         <ScrollReveal animation="fade-up" duration={0.6}>
-          <h3 style={{
+          <h2 style={{
             color: 'var(--color-text-dark)',
             fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
             fontWeight: 800,
@@ -102,7 +102,7 @@ export default function SocialBanner() {
             letterSpacing: '-0.02em',
           }}>
             Följ oss på sociala medier
-          </h3>
+          </h2>
         </ScrollReveal>
 
         <ScrollReveal animation="fade-up" duration={0.6} delay={100}>

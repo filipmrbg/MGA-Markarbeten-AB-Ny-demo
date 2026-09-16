@@ -227,7 +227,7 @@ export default function Home() {
             {/* Huge Responsive Condensed Headline (H1) */}
             <ScrollReveal animation="fade-up" delay={100} duration={0.8}>
               <h1 className="hero-main-title">
-                MGA MARKARBETEN AB
+                MGA Markarbeten AB – Habo
               </h1>
             </ScrollReveal>
 
@@ -293,6 +293,33 @@ export default function Home() {
         padding: 'clamp(60px, 8vw, 100px) 0',
       }}>
         <div style={container}>
+          <div style={{ textAlign: 'center', marginBottom: '52px' }}>
+            <ScrollReveal animation="blur-in">
+              <h2 style={{
+                color: 'var(--color-text-dark)',
+                fontWeight: 800,
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
+                letterSpacing: '-0.02em',
+                margin: '0 0 14px 0',
+              }}>
+                Så här arbetar vi
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal animation="scale-x-center" delay={150} duration={0.6}>
+              <span style={{ display: 'block', width: '50px', height: '3px', background: 'var(--color-primary)', borderRadius: '2px', margin: '0 auto 16px auto' }} />
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <p style={{
+                color: 'var(--color-gray-600)',
+                fontSize: '1.05rem',
+                maxWidth: '620px',
+                margin: '0 auto',
+                lineHeight: 1.7,
+              }}>
+                Från första samtal till färdigt resultat – vi guidar dig genom hela processen.
+              </p>
+            </ScrollReveal>
+          </div>
           <div className="steps-grid-wrapper" style={{
             display: 'flex',
             alignItems: 'flex-start',

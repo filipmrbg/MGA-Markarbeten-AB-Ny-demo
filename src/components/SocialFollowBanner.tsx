@@ -31,7 +31,7 @@ export default function SocialFollowBanner() {
               }}>
                 Instagram
               </span>
-              <h3 style={{
+              <h2 style={{
                 fontSize: 'clamp(1.2rem, 2vw, 1.45rem)',
                 fontWeight: 800,
                 color: '#0f172a',
@@ -39,7 +39,7 @@ export default function SocialFollowBanner() {
                 lineHeight: 1.25,
               }}>
                 Följ våra olika projekt & jobb
-              </h3>
+              </h2>
               <p style={{
                 color: '#64748b',
                 fontSize: '0.92rem',

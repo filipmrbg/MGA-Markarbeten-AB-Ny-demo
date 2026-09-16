@@ -88,7 +88,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
         }}>
           Kostnadsfri rådgivning
         </span>
-        <h3 style={{
+        <h2 style={{
           textAlign: 'center',
           fontWeight: 800,
           fontSize: '1.35rem',
@@ -97,7 +97,7 @@ function QuoteForm({ serviceTitle }: { serviceTitle: string }) {
           fontFamily: 'var(--font-family)',
         }}>
           Begär offert för {serviceTitle.split('&')[0].trim()}
-        </h3>
+        </h2>
       </div>
 
       {status === 'success' ? (

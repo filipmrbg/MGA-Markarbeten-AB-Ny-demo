@@ -132,7 +132,7 @@ export default function Gallery() {
             lineHeight: 1.15,
             letterSpacing: '-0.02em',
           }}>
-            Galleri
+            Galleri – Våra projekt i Habo
           </h1>
 
           <p style={{
@@ -150,6 +150,9 @@ export default function Gallery() {
       {/* ── PURE PHOTO GRID ──────────── */}
       <section style={{ padding: 'clamp(50px, 7vw, 90px) 0' }}>
         <div style={container}>
+          <h2 style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0 0 0 0)', margin: '-1px', padding: 0, border: 0 }}>
+            Våra projektbilder
+          </h2>
           <div className="pure-photo-grid">
             {galleryImages.map((img, index) => (
               <ScrollReveal key={index} animation="fade-up" duration={0.5} delay={index * 0.04}>
