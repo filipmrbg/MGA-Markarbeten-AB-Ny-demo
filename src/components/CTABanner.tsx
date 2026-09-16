@@ -155,7 +155,7 @@ export default function CTABanner({ heading = defaultHeading, checkItems = defau
                     el.playsInline = true;
                   }
                 }}
-                src="/optimized/cQv8gpJ.mp4"
+                src="https://i.imgur.com/cQv8gpJ.mp4"
                 preload="metadata"
                 autoPlay
                 loop
@@ -170,8 +170,8 @@ export default function CTABanner({ heading = defaultHeading, checkItems = defau
                   display: 'block',
                 }}
               >
-                <source src="/optimized/cQv8gpJ.mp4" type="video/mp4" />
-                <source src="/cta-background-video.mp4" type="video/mp4" />
+                <source src="https://i.imgur.com/cQv8gpJ.mp4" type="video/mp4" />
+                <source src="/mga-about-video.mp4" type="video/mp4" />
               </video>
             </div>
           </ScrollReveal>

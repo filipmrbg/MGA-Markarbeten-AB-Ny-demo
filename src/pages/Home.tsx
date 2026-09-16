@@ -46,7 +46,7 @@ export default function Home() {
   const desktopHeroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260904_195041_73807493-4fb3-4109-b8e9-7674b6947a13.mp4';
   const mobileHeroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260905_103846_3ea9bdec-786a-4126-a9e5-18a07419dd39.mp4';
   const currentHeroVideo = isMobile ? mobileHeroVideo : desktopHeroVideo;
-  const currentHeroLocal = isMobile ? '/hero-video-mobile.mp4' : '/hero-video.mp4';
+  const currentHeroLocal = '/hero-video.mp4';
 
   useEffect(() => {
     let ticking = false;
@@ -376,7 +376,7 @@ export default function Home() {
               }}>
                 <video
                   ref={foundationVideoRef}
-                  src="/optimized/fTDcor7.mp4"
+                  src="https://i.imgur.com/fTDcor7.mp4"
                   preload="metadata"
                   autoPlay
                   muted
