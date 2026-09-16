@@ -6,8 +6,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const RECIPIENT_EMAIL = "f.bjorgaas@gmail.com";
-const SENDER_EMAIL = "Kontaktformulär <info@contact.bgbygger.se>";
+const RECIPIENT_EMAIL = "mattias@mgamark.se";
+const SENDER_EMAIL = "Kontaktformulär <info@mgamark.se>";
 
 function formatSwedishDateTime(): string {
   const now = new Date();
