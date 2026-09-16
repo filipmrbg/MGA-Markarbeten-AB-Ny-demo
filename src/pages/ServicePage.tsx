@@ -6,6 +6,7 @@ import ScrollReveal from '../components/ScrollReveal';
 import FAQAccordion from '../components/FAQAccordion';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
+import SeoSchema from '../components/SeoSchema';
 
 const container: CSSProperties = {
   maxWidth: 'var(--container-max)',
@@ -229,6 +230,8 @@ export default function ServicePage() {
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
+
+      <SeoSchema type="ServicePage" name={`${service.title} – MGA Markarbeten AB`} description={service.heroText} breadcrumb={[{ name: 'Hem', path: '/' }, { name: 'Tjänster', path: '/tjanster' }, { name: service.title, path: `/tjanster/${service.slug}` }]} />
 
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="service-hero-section" style={{

@@ -128,12 +128,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* Column 3: Contact (NAP) */}
           <div>
             <h3 style={{ fontWeight: 700, color: 'var(--color-text-dark)', fontSize: '1rem', margin: '0 0 20px 0' }}>
               Kontaktuppgifter
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
+
+              <div className="footer-contact-static">
+                <div className="footer-contact-icon">
+                  <MapPin size={16} strokeWidth={2} />
+                </div>
+                <span>
+                  MGA Markarbeten AB<br />
+                  Habo, Jönköpings län 566 33
+                </span>
+              </div>
+
+              <a
+                href="tel:0761778570"
+                className="footer-contact-item"
+              >
+                <div className="footer-contact-icon">
+                  <Phone size={16} strokeWidth={2} />
+                </div>
+                <span>076-177 85 70</span>
+              </a>
 
               <a
                 href="mailto:mattias@mgamark.se"
@@ -146,23 +166,13 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:0761778570"
-                className="footer-contact-item"
+                href="https://www.google.com/maps/search/?api=1&query=MGA+Markarbeten+AB+Habo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-google-link"
               >
-                <div className="footer-contact-icon">
-                  <Phone size={16} strokeWidth={2} />
-                </div>
-                <span>076-177 85 70</span>
+                Hitta oss på Google Maps
               </a>
-
-              <div
-                className="footer-contact-static"
-              >
-                <div className="footer-contact-icon">
-                  <MapPin size={16} strokeWidth={2} />
-                </div>
-                <span>Habo som utgångspunkt</span>
-              </div>
             </div>
           </div>
         </div>

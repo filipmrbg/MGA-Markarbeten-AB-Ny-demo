@@ -14,6 +14,7 @@ import ReviewCard from '../components/ReviewCard';
 import SocialBanner from '../components/SocialBanner';
 import CallModal from '../components/CallModal';
 import { usePageTitle } from '../hooks/usePageTitle';
+import SeoSchema from '../components/SeoSchema';
 import images from '../data/images';
 import services, { ServiceItem } from '../data/services';
 
@@ -135,6 +136,8 @@ export default function Home() {
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
+
+      <SeoSchema type="WebPage" name="MGA Markarbeten AB – Habo" description="MGA Markarbeten AB utför anläggning, bygg, dränering och skog med Habo som utgångspunkt." breadcrumb={[{ name: 'Hem', path: '/' }]} />
 
       {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
       <section style={{

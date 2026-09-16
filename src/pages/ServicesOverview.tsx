@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
+import SeoSchema from '../components/SeoSchema';
 import services, { ServiceItem } from '../data/services';
 
 const container: React.CSSProperties = {
@@ -48,6 +49,8 @@ export default function ServicesOverview() {
 
   return (
     <main style={{ fontFamily: 'var(--font-family)', background: '#ffffff' }}>
+
+      <SeoSchema type="CollectionPage" name="Våra tjänster – MGA Markarbeten AB Habo" description="Översikt av MGA Markarbeten ABs tjänster: anläggning, bygg, dränering & V/A och skog i Habo och Jönköping." breadcrumb={[{ name: 'Hem', path: '/' }, { name: 'Tjänster', path: '/tjanster' }]} />
 
       {/* ── HERO HEADER ──────────── */}
       <section style={{

@@ -5,6 +5,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import SocialFollowBanner from '../components/SocialFollowBanner';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
+import SeoSchema from '../components/SeoSchema';
 
 const container: React.CSSProperties = {
   maxWidth: 'var(--container-max)',
@@ -103,6 +104,8 @@ export default function Contact() {
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
+
+      <SeoSchema type="ContactPage" name="Kontakta MGA Markarbeten AB" description="Kontakta MGA Markarbeten AB i Habo för offert, rådgivning och kostnadsfria platsbesök." breadcrumb={[{ name: 'Hem', path: '/' }, { name: 'Kontakt', path: '/kontakt' }]} />
 
       {/* ── SECTION A: HERO ───────────────────────────────────── */}
       <section style={{
@@ -211,7 +214,8 @@ export default function Contact() {
                       Plats / Utgångspunkt
                     </p>
                     <p style={{ margin: 0, color: 'var(--color-gray-600)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                      Habo som utgångspunkt
+                      Habo, Jönköpings län<br />
+                      Utgångspunkt för hela Habo med omnejd
                     </p>
                   </div>
                 </div>
@@ -357,7 +361,7 @@ export default function Contact() {
                       transition: 'transform 0.2s ease, opacity 0.2s ease',
                     }}
                   >
-                    <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
+                    <Send size={18} /> skicka offertförfrågan
                   </button>
                   {status === 'sending' && (
                     <p style={{ marginTop: '16px', fontSize: '0.9rem', color: 'var(--color-gray-600)', textAlign: 'center' }}>

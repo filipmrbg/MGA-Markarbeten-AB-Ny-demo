@@ -38,43 +38,66 @@
     <meta name="twitter:description" content="MGA Markarbeten AB utför alla typer av entreprenad- och markarbeten med Habo som utgångspunkt." />
     <meta name="twitter:image" content="https://mgamark.se/og-image.png" />
 
-    <!-- JSON-LD: ConstructionBusiness -->
+    <!-- JSON-LD: LocalBusiness (ConstructionBusiness) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ConstructionBusiness",
+      "@type": ["LocalBusiness", "ConstructionBusiness"],
+      "@id": "https://mgamark.se/#business",
       "name": "MGA Markarbeten AB",
       "alternateName": "MGA Markarbeten",
-      "description": "Professionellt entreprenadföretag med Habo som utgångspunkt för alla typer av entreprenad- och markarbeten.",
+      "description": "Professionellt entreprenadföretag med Habo som utgångspunkt för alla typer av entreprenad- och markarbeten. Vi utför schakt, dränering, grundläggning, anläggning och tomtplanering.",
       "url": "https://mgamark.se",
       "logo": "https://mgamark.se/mga-logo.png",
       "image": "https://mgamark.se/og-image.png",
-      "telephone": ["0761778570"],
+      "telephone": "+46761778570",
       "email": "mattias@mgamark.se",
-      "priceRange": "$$",
+      "priceRange": "$",
+      "currenciesAccepted": "SEK",
+      "paymentAccepted": "Faktura",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Habo",
-        "addressRegion": "Habo",
+        "addressRegion": "Jönköpings län",
+        "postalCode": "566 33",
         "addressCountry": "SE"
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "Habo med omnejd"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 57.9072,
+        "longitude": 13.7414
       },
-      "openingHoursSpecification": {
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=MGA+Markarbeten+AB+Habo",
+      "areaServed": [
+        { "@type": "City", "name": "Habo" },
+        { "@type": "City", "name": "Jönköping" },
+        { "@type": "City", "name": "Mullsjö" },
+        { "@type": "AdministrativeArea", "name": "Jönköpings län" }
+      ],
+      "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "07:00",
         "closes": "16:00"
-      },
-      "legalName": "MGA Markarbeten AB"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/mgamarkarbeten/",
+        "https://maps.google.com/?cid=0"
+      ],
+      "legalName": "MGA Markarbeten AB",
+      "foundingDate": "2011"
+    }
+    </script>
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mgamark.se/#website",
+      "url": "https://mgamark.se",
+      "name": "MGA Markarbeten AB",
+      "inLanguage": "sv-SE",
+      "publisher": { "@id": "https://mgamark.se/#business" }
     }
     </script>
   </head>
