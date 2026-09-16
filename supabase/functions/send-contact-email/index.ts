@@ -148,9 +148,9 @@ Deno.serve(async (req: Request) => {
     const service = (body.service ?? "").toString().trim();
     const source = (body.source ?? "kontakt").toString().trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || (!message && !service)) {
       return new Response(
-        JSON.stringify({ error: "Namn, e-post och meddelande är obligatoriska." }),
+        JSON.stringify({ error: "Namn och e-post är obligatoriska." }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
@@ -180,7 +180,7 @@ Deno.serve(async (req: Request) => {
 
     const { error: sendError } = await resend.emails.send({
       from: SENDER_EMAIL,
-      to: [RECIPI_EMAIL],
+      to: [RECIPIENT_EMAIL],
       reply_to: email,
       subject: `${subjectPrefix} från ${name}`,
       html,
