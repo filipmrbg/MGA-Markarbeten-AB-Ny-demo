@@ -71,9 +71,6 @@ export default function Quote() {
     e.preventDefault();
     setStatus('sending');
     try {
-      const fullMessage = service
-        ? `Tjänst: ${service}\n\n${message}`
-        : message;
       const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -81,7 +78,7 @@ export default function Quote() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
         },
-        body: JSON.stringify({ name, email, phone, message: fullMessage, source: 'offert' }),
+        body: JSON.stringify({ name, email, phone, service, message, source: 'offert' }),
       });
       if (!response.ok) {
         setStatus('error');

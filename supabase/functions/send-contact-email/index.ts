@@ -6,7 +6,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const RECIPIENT_EMAIL = "mattias@mgamark.se";
+const RECIPIENT_EMAIL = "f.bjorgaas@gmail.com";
+const SENDER_EMAIL = "Kontaktformulär <info@contact.bgbygger.se>";
 
 function formatSwedishDateTime(): string {
   const now = new Date();
@@ -35,6 +36,7 @@ function buildEmailHtml(
   name: string,
   email: string,
   phone: string,
+  service: string,
   message: string,
   dateTime: string,
   submissionId: string,
@@ -42,9 +44,18 @@ function buildEmailHtml(
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safePhone = escapeHtml(phone);
+  const safeService = escapeHtml(service);
   const safeMessage = escapeHtml(message);
   const safeDateTime = escapeHtml(dateTime);
   const safeId = escapeHtml(submissionId);
+  const serviceRow = service
+    ? `                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;">
+                    <span style="font-weight: 600; color: #374151; display: block; margin-bottom: 4px;">Tjänst:</span>
+                    <span style="color: #1f2937;">${safeService}</span>
+                  </td>
+                </tr>`
+    : "";
 
   return `<!DOCTYPE html>
 <html lang="sv">
@@ -85,7 +96,7 @@ function buildEmailHtml(
                     <a href="tel:${safePhone}" style="color: #2563eb; text-decoration: none;">${safePhone}</a>
                   </td>
                 </tr>
-
+${serviceRow}
                 <tr>
                   <td style="padding: 12px 0;">
                     <span style="font-weight: 600; color: #374151; display: block; margin-bottom: 4px;">Meddelande:</span>
@@ -134,6 +145,7 @@ Deno.serve(async (req: Request) => {
     const email = (body.email ?? "").toString().trim();
     const phone = (body.phone ?? "").toString().trim();
     const message = (body.message ?? "").toString().trim();
+    const service = (body.service ?? "").toString().trim();
     const source = (body.source ?? "kontakt").toString().trim();
 
     if (!name || !email || !message) {
@@ -154,7 +166,7 @@ Deno.serve(async (req: Request) => {
     const submissionId = crypto.randomUUID();
     const dateTime = formatSwedishDateTime();
     const subjectPrefix = source === "offert" ? "Ny offertförfrågan" : "Ny kontaktförfrågan";
-    const html = buildEmailHtml(name, email, phone, message, dateTime, submissionId);
+    const html = buildEmailHtml(name, email, phone, service, message, dateTime, submissionId);
 
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
@@ -167,7 +179,7 @@ Deno.serve(async (req: Request) => {
     const resend = new Resend(resendApiKey);
 
     const { error: sendError } = await resend.emails.send({
-      from: "MGA Markarbeten <onboarding@resend.dev>",
+      from: SENDER_EMAIL,
       to: [RECIPI_EMAIL],
       reply_to: email,
       subject: `${subjectPrefix} från ${name}`,
