@@ -85,14 +85,9 @@ export default function ServicesOverview() {
         </div>
       </section>
 
-      {/* ── STICKY ANCHOR TAB BAR ──────────────────────────── */}
+      {/* ── SERVICE ANCHOR TAB BAR ──────────────────────────── */}
       <div style={{
-        position: 'sticky',
-        top: '72px',
-        zIndex: 40,
-        background: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        background: '#ffffff',
         borderBottom: '1px solid #e2e8f0',
         padding: '12px 0',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
